@@ -12,6 +12,8 @@ export function SpaceAnimation() {
       <div className="shooting-star"></div>
       <div className="shooting-star"></div>
       <div className="shooting-star"></div>
+      <div className="shooting-star"></div>
+      <div className="shooting-star"></div>
     </div>
   );
 }

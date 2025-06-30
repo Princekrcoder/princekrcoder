@@ -163,3 +163,15 @@
   animation-delay: 8s;
   animation-duration: 5.5s;
 }
+.shooting-star:nth-child(7) {
+  top: 20%;
+  left: -80%;
+  animation-delay: 9.5s;
+  animation-duration: 6.5s;
+}
+.shooting-star:nth-child(8) {
+  top: 90%;
+  left: -10%;
+  animation-delay: 11s;
+  animation-duration: 4s;
+}
