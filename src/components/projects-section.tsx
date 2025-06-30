@@ -82,7 +82,7 @@ export function ProjectsSection() {
       offset: ["start start", "end end"],
     });
 
-    const PEEK_HEIGHT = 64;
+    const PEEK_HEIGHT = -64;
 
   return (
     <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-slate-950 to-black">
