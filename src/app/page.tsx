@@ -117,7 +117,7 @@ export default function Home() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Join my Discord" className="fixed bottom-8 right-8 z-50 text-primary transition-transform duration-300 hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+             <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Join my Discord" className="fixed bottom-8 right-8 z-50 text-primary transition-transform duration-300 hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               <Send className="h-10 w-10" />
             </Link>
           </TooltipTrigger>
@@ -277,6 +277,11 @@ function Footer() {
           <Button variant="ghost" size="icon" asChild>
             <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6" />
+            </Link>
+          </Button>
+           <Button variant="ghost" size="icon" asChild>
+            <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+              <Send className="h-6 w-6" />
             </Link>
           </Button>
         </div>
