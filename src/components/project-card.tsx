@@ -65,26 +65,34 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   data-ai-hint={project.aiHint}
               />
            </div>
-           <div className="p-6 flex-grow [transform:translateZ(40px)] transition-transform duration-300 ease-out group-hover:[transform:translateZ(40px)_translateY(-16px)]">
-              <h3 className="text-xl font-bold font-headline">{project.title}</h3>
-              <div className="mt-2 flex flex-wrap gap-2">
+           <div className="p-6 flex-grow flex flex-col [transform:translateZ(40px)]">
+              <div className="transition-transform duration-300 ease-out hover:-translate-y-4">
+                <h3 className="text-xl font-bold font-headline">{project.title}</h3>
+              </div>
+              <div className="mt-2 flex flex-wrap gap-2 transition-transform duration-300 ease-out hover:-translate-y-4">
                 {project.tags.map(tag => <Badge key={tag} variant="outline">{tag}</Badge>)}
               </div>
-              <p className="mt-4 text-muted-foreground text-sm">{project.description}</p>
+              <div className="flex-grow mt-4 transition-transform duration-300 ease-out hover:-translate-y-4">
+                <p className="text-muted-foreground text-sm">{project.description}</p>
+              </div>
            </div>
-           <div className="px-6 pb-4 flex justify-end gap-2 [transform:translateZ(50px)] transition-transform duration-300 ease-out group-hover:[transform:translateZ(50px)_translateY(-16px)]">
-            <Button variant="outline" size="sm" asChild>
-              <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-1 h-4 w-4" />
-                GitHub
-              </Link>
-            </Button>
-            <Button size="sm" asChild>
-              <Link href={project.live} target="_blank" rel="noopener noreferrer">
-                Live Demo
-                <ArrowUpRight className="ml-1 h-4 w-4" />
-              </Link>
-            </Button>
+           <div className="px-6 pb-4 flex justify-end gap-2 [transform:translateZ(50px)]">
+            <div className="transition-transform duration-300 ease-out hover:-translate-y-4">
+              <Button variant="outline" size="sm" asChild>
+                <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-1 h-4 w-4" />
+                  GitHub
+                </Link>
+              </Button>
+            </div>
+            <div className="transition-transform duration-300 ease-out hover:-translate-y-4">
+              <Button size="sm" asChild>
+                <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                  <ArrowUpRight className="ml-1 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
            </div>
         </div>
       </div>
