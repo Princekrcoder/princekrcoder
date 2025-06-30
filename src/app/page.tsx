@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight, User, Briefcase } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://picsum.photos/seed/e-commerce-platform/600/400',
+    image: 'https://picsum.photos/seed/ecommerce/600/400',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
@@ -204,11 +204,11 @@ function AboutSection() {
                         </div>
                         <div className="flex items-start gap-4 p-6 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
                             <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                                <User className="h-6 w-6 text-primary" />
+                                <BrainCircuit className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold">UI/UX Design</h4>
-                                <p className="text-muted-foreground mt-1">Designing intuitive user interfaces and seamless user experiences.</p>
+                                <h4 className="text-xl font-bold">Problem Solving (DSA)</h4>
+                                <p className="text-muted-foreground mt-1">Solved 600+ DSA problems in C++, showcasing strong algorithmic and logical thinking.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4 p-6 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
