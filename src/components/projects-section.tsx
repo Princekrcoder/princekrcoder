@@ -49,29 +49,38 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects">
+    <section id="projects" className="relative">
       <div className="container mx-auto max-w-7xl px-4 text-center py-20 md:py-32">
         <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground">Featured Projects</h2>
         <p className="mt-4 text-lg text-muted-foreground">
           See how I transformed concepts into engaging digital experiences.
         </p>
       </div>
-      <div ref={ref} className="container mx-auto max-w-3xl relative h-[250vh]">
+      {/* Increased height to allow for more scroll distance for the animation */}
+      <div ref={ref} className="container mx-auto max-w-3xl relative h-[300vh]">
         {projects.map((project, i) => {
-          const range: [number, number] = [i / projects.length, (i + 1) / projects.length];
-          const scale = useTransform(scrollYProgress, range, [1, 0.8]);
-          const opacity = useTransform(scrollYProgress, range, [1, 0]);
+          // Cards at the back of the stack are smaller and scale up as they come to the front.
+          const targetScale = 1 - (projects.length - i - 1) * 0.05;
+          const scale = useTransform(scrollYProgress, [0, 1], [targetScale, 1]);
+
+          // Animate the vertical position to create the initial distance and then overlap.
+          const initialSeparation = 12; // rem
+          const finalOverlap = 4; // rem
+          const top = useTransform(
+            scrollYProgress,
+            [0, 1],
+            [`${i * initialSeparation}rem`, `${i * finalOverlap}rem`]
+          );
 
           return (
             <motion.div
               key={project.title}
               style={{
                 position: 'sticky',
-                top: '15vh',
+                top: top,
                 scale,
-                opacity,
               }}
-              className="w-full"
+              className="w-full origin-top"
             >
               <ProjectCard project={project} />
             </motion.div>
