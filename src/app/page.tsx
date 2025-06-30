@@ -4,12 +4,11 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, Send } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { ContactIcon } from '@/components/contact-icon';
 
 const projects = [
   {
@@ -118,11 +117,13 @@ export default function Home() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link href="#contact" aria-label="Get in touch" className="fixed bottom-8 right-8 z-50 transition-all duration-300 hover:scale-110">
-              <ContactIcon className="h-10 w-10" />
-            </Link>
+            <Button asChild size="icon" className="fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full shadow-lg transition-all duration-300 hover:scale-110">
+                <Link href="#contact" aria-label="Get in touch">
+                  <Send className="h-6 w-6" />
+                </Link>
+            </Button>
           </TooltipTrigger>
-          <TooltipContent>
+          <TooltipContent side="left" sideOffset={10}>
             <p>Get in touch</p>
           </TooltipContent>
         </Tooltip>
