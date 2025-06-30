@@ -174,14 +174,17 @@ function AboutSection() {
                         About <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Me</span>
                     </h2>
                 </div>
-                <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="grid md:grid-cols-2 gap-16 items-start">
                     <div className="flex flex-col gap-6">
                         <h3 className="font-headline text-2xl font-bold">Passionate Web Developer & Tech Creator</h3>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            With over 5 years of experience in web development, I specialize in creating responsive, accessible, and performant web applications using modern technologies.
+                            With 2 years of freelancing experience in web development, I’ve successfully completed 20+ projects, delivering responsive and high-performance websites using modern technologies.
                         </p>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            I'm passionate about creating elegant solutions to complex problems, and I'm constantly learning new technologies and techniques to stay at the forefront of the ever-evolving web landscape.
+                            Alongside web development, I have a strong foundation in C++ and Data Structures & Algorithms (DSA), with over 600+ problems solved across various platforms. My problem-solving mindset helps me write efficient, scalable code and tackle technical challenges with confidence.
+                        </p>
+                        <p className="text-muted-foreground text-lg leading-relaxed">
+                            I’m passionate about continuous learning and always strive to improve my skills to stay ahead in the fast-paced tech world.
                         </p>
                         <div className="flex gap-4 mt-4">
                             <Button asChild size="lg">
