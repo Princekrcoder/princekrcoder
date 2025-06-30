@@ -178,13 +178,10 @@ function AboutSection() {
                     <div className="flex flex-col gap-6">
                         <h3 className="font-headline text-2xl font-bold">Passionate Web Developer & Tech Creator</h3>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            With 2 years of freelancing experience in web development, I’ve successfully completed 20+ projects, delivering responsive and high-performance websites using modern technologies.
+                            With 2 years of freelancing experience in web development, I specialize in building responsive and high-performance web applications using modern technologies.
                         </p>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            Alongside web development, I have a strong foundation in C++ and Data Structures & Algorithms (DSA), with over 600+ problems solved across various platforms. My problem-solving mindset helps me write efficient, scalable code and tackle technical challenges with confidence.
-                        </p>
-                        <p className="text-muted-foreground text-lg leading-relaxed">
-                            I’m passionate about continuous learning and always strive to improve my skills to stay ahead in the fast-paced tech world.
+                            I’ve completed 20+ diverse projects, and I’m passionate about solving real-world problems through clean and efficient code. I continuously enhance my skills to stay current in the ever-evolving tech landscape.
                         </p>
                         <div className="flex gap-4 mt-4">
                             <Button asChild size="lg">
