@@ -82,7 +82,7 @@ export function ProjectsSection() {
       offset: ["start start", "end end"],
     });
 
-    const PEEK_HEIGHT = -64;
+    const PEEK_HEIGHT = -48; // Negative value to stack cards on top of each other.
 
   return (
     <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-slate-950 to-black">
@@ -92,12 +92,18 @@ export function ProjectsSection() {
                 A selection of my work that showcases my skills and passion for development.
             </p>
         </div>
-        <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 relative h-[400vh]">
-          {projects.map((project, i) => {
+        <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 relative h-[500vh]">
+          {/* By reversing the projects array, the last project becomes the first one to be mapped.
+              This allows us to give it the highest z-index, placing it on top of the stack. */}
+          {projects.slice().reverse().map((project, i) => {
+            
+            // The transform maps scroll progress (0 to 1) to a Y translation.
+            // Each card starts stacked on top of the previous one (due to negative PEEK_HEIGHT).
+            // As you scroll, each card moves up and away, with the top card moving the fastest.
             const y = useTransform(
                 scrollYProgress,
                 [0, 1],
-                [`${i * PEEK_HEIGHT}px`, `${(i - projects.length) * PEEK_HEIGHT}px`]
+                [`${i * PEEK_HEIGHT}px`, `-${(projects.length - i) * 200}px`]
             );
             
             return (
@@ -107,7 +113,7 @@ export function ProjectsSection() {
                   y,
                   zIndex: projects.length - i,
                 }}
-                className="sticky top-28 md:top-36"
+                className="sticky top-28 md:top-36 w-full"
               >
                 <ProjectCard project={project} />
               </motion.div>
