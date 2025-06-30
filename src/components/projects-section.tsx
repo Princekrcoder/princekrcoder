@@ -1,7 +1,7 @@
-
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ProjectCard } from './project-card';
 
 const projects = [
@@ -14,10 +14,7 @@ const projects = [
       'Improved site speed by 50%',
       'Increased mobile traffic by 35%',
     ],
-    image: 'https://placehold.co/800x600.png',
-    github: 'https://github.com/Princekrcoder',
     live: '#',
-    aiHint: 'e-commerce website'
   },
   {
     title: 'Social Media App',
@@ -28,10 +25,7 @@ const projects = [
       'Secure user authentication',
       'Image and video uploads',
     ],
-    image: 'https://picsum.photos/seed/social/800/600',
-    github: 'https://github.com/Princekrcoder',
     live: '#',
-    aiHint: 'social network'
   },
     {
     title: 'Task Management Tool',
@@ -42,10 +36,7 @@ const projects = [
       'Team collaboration features',
       'Customizable notifications',
     ],
-    image: 'https://picsum.photos/seed/task/800/600',
-    github: 'https://github.com/Princekrcoder',
     live: '#',
-    aiHint: 'project management'
   },
   {
     title: 'Blogging Platform',
@@ -56,10 +47,7 @@ const projects = [
       'SEO-friendly article structure',
       'Comment and discussion threads',
     ],
-    image: 'https://picsum.photos/seed/blog/800/600',
-    github: 'https://github.com/Princekrcoder',
     live: '#',
-    aiHint: 'writing reading'
   },
   {
     title: 'Portfolio Generator',
@@ -70,10 +58,7 @@ const projects = [
       'Multiple modern templates',
       'One-click deployment',
     ],
-    image: 'https://picsum.photos/seed/portfolio/800/600',
-    github: 'https://github.com/Princekrcoder',
     live: '#',
-    aiHint: 'web design'
   },
   {
     title: 'Weather App',
@@ -84,31 +69,46 @@ const projects = [
       '7-day forecast view',
       'Geolocation for local weather',
     ],
-    image: 'https://picsum.photos/seed/weather/800/600',
-    github: 'https://github.com/Princekrcoder',
     live: '#',
-    aiHint: 'weather forecast'
   },
 ];
 
 
 export function ProjectsSection() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+      target: containerRef,
+      offset: ["start start", "end end"],
+    });
+
   return (
-    <section id="projects" className="py-20 md:py-32">
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="mb-16 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight">My Projects</h2>
-          <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
+    <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-slate-950 to-black">
+        <div className="container mx-auto max-w-3xl px-4 text-center mb-16">
+            <h2 className="font-headline text-4xl font-bold tracking-tight">Featured Projects</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+                A selection of my work that showcases my skills and passion for development.
+            </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-                <ProjectCard
-                  key={project.title}
-                  project={project}
-                />
-            ))}
+        <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 relative h-[300vh]">
+          {projects.map((project, i) => {
+            const targetScale = 1 - (projects.length - i - 1) * 0.05;
+            const scale = useTransform(
+              scrollYProgress,
+              [i / projects.length, 1],
+              [1, targetScale]
+            );
+
+            return (
+              <motion.div
+                key={project.title}
+                style={{ scale }}
+                className="sticky top-28 md:top-36"
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
     </section>
   );
 }

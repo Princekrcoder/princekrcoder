@@ -2,7 +2,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
@@ -13,36 +12,29 @@ interface ProjectCardProps {
     company: string;
     year: string;
     features: string[];
-    image: string;
     live: string;
-    aiHint: string;
   };
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-slate-900/95 backdrop-blur-sm border border-slate-700/50 rounded-2xl text-card-foreground shadow-2xl shadow-black/30 overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-primary/20 hover:border-primary/20 transform hover:-translate-y-2">
-      <div className="relative h-56 w-full">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover"
-          data-ai-hint={project.aiHint}
-        />
-      </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <p className="text-sm font-semibold text-accent mb-1 uppercase tracking-wider">
+    <div className="group relative rounded-2xl bg-slate-900/80 p-8 text-card-foreground shadow-2xl shadow-black/40 backdrop-blur-sm h-full flex flex-col">
+      {/* Glowing Border */}
+      <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-20 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
+      <div className="absolute inset-0 rounded-2xl border border-primary/20" />
+      
+      <div className="relative z-10 flex flex-col h-full">
+        <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
           {project.company} &bull; {project.year}
         </p>
-        <h3 className="font-headline text-2xl font-bold text-foreground mb-4">
+        <h3 className="font-headline text-3xl font-bold text-foreground mb-6">
           {project.title}
         </h3>
-        <ul className="space-y-3 mb-6">
+        <ul className="space-y-3 mb-6 flex-grow">
           {project.features.map((feature, i) => (
             <li key={i} className="flex items-start gap-3">
               <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-              <span className="text-muted-foreground text-sm">{feature}</span>
+              <span className="text-muted-foreground">{feature}</span>
             </li>
           ))}
         </ul>
