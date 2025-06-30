@@ -66,7 +66,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
            </div>
            <div className="p-6 flex-grow flex flex-col [transform:translateZ(40px)]">
-              <h3 className="text-xl font-bold font-headline transition-all duration-300 ease-out hover:-translate-y-0.5 hover:text-primary [text-shadow:0_0_24px_hsl(var(--primary))]">{project.title}</h3>
+              <h3 className="text-xl font-bold font-headline transition-all duration-300 ease-out hover:-translate-y-0.5 hover:text-primary [text-shadow:0_0_48px_hsl(var(--primary))]">{project.title}</h3>
               <div className="mt-2 flex flex-wrap gap-2">
                 {project.tags.map(tag => <Badge key={tag} variant="outline" className="transition-transform duration-300 ease-out hover:-translate-y-0.5">{tag}</Badge>)}
               </div>
