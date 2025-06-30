@@ -1,99 +1,59 @@
+
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
 interface ProjectCardProps {
   project: {
     title: string;
-    description: string;
+    company: string;
+    year: string;
+    features: string[];
     image: string;
-    tags: string[];
-    github: string;
     live: string;
     aiHint: string;
   };
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = cardRef.current;
-    if (!card) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = (y - centerY) / -10;
-    const rotateY = (x - centerX) / 10;
-
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  };
-
-  const handleMouseLeave = () => {
-    const card = cardRef.current;
-    if (card) {
-      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    }
-  };
-
   return (
-    <div className="perspective-[1000px]">
-      <div
-        ref={cardRef}
-        className="group transform-style-3d will-change-transform bg-card/10 backdrop-blur-sm border border-border/20 rounded-xl text-card-foreground shadow-lg transition-transform duration-300 ease-out hover:shadow-primary/20 hover:shadow-2xl"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="transform-style-3d p-1 flex flex-col h-full">
-            <div className="aspect-video overflow-hidden border-b border-border/20 rounded-t-lg [transform:translateZ(20px)]">
-              <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover rounded-t-lg"
-                  data-ai-hint={project.aiHint}
-              />
-           </div>
-           <div className="p-6 flex-grow flex flex-col [transform:translateZ(40px)]">
-              <h3 className="inline-block rounded-lg text-xl font-bold font-headline transition-all duration-300 ease-out [text-shadow:0_0_96px_hsl(var(--primary))]">
-                <span className="transition-transform duration-300 ease-out hover:-translate-y-0.5 inline-block">{project.title}</span>
-              </h3>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {project.tags.map(tag => <Badge key={tag} variant="outline" className="transition-transform duration-300 ease-out hover:-translate-y-0.5">{tag}</Badge>)}
-              </div>
-              <div className="flex-grow mt-4">
-                <p className="text-muted-foreground text-sm transition-transform duration-300 ease-out hover:-translate-y-0.5">{project.description}</p>
-              </div>
-           </div>
-           <div className="px-6 pb-4 flex justify-end gap-2 [transform:translateZ(50px)]">
-            <div className="transition-transform duration-300 ease-out hover:-translate-y-0.5">
-              <Button variant="outline" size="sm" asChild>
-                <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-1 h-4 w-4" />
-                  GitHub
-                </Link>
-              </Button>
-            </div>
-            <div className="transition-transform duration-300 ease-out hover:-translate-y-0.5">
-              <Button size="sm" asChild>
-                <Link href={project.live} target="_blank" rel="noopener noreferrer">
-                  Live Demo
-                  <ArrowUpRight className="ml-1 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-           </div>
+    <div className="bg-card/10 backdrop-blur-sm border border-border/20 rounded-xl text-card-foreground shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-primary/20">
+      <div className="grid md:grid-cols-2 items-center">
+        <div className="p-8 md:p-12 order-2 md:order-1">
+          <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
+            {project.company} &bull; {project.year}
+          </p>
+          <h3 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-6">
+            {project.title}
+          </h3>
+          <ul className="space-y-4 mb-8">
+            {project.features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                <span className="text-muted-foreground">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Button asChild size="lg">
+            <Link href={project.live} target="_blank" rel="noopener noreferrer">
+              Visit Live Site
+              <ArrowUpRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+        <div className="aspect-video md:aspect-auto order-1 md:order-2 h-full w-full">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={800}
+            height={600}
+            className="h-full w-full object-cover"
+            data-ai-hint={project.aiHint}
+          />
         </div>
       </div>
     </div>

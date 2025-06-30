@@ -14,108 +14,168 @@ import { DiscordIcon } from '@/components/icons/discord-icon';
 const projects = [
   {
     title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://placehold.co/600x400.png',
-    tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
+    company: 'Retail Co.',
+    year: '2023',
+    features: [
+      'Enhanced user experience by 40%',
+      'Improved site speed by 50%',
+      'Increased mobile traffic by 35%',
+    ],
+    image: 'https://placehold.co/800x600.png',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'e-commerce website'
   },
   {
     title: 'Social Media App',
-    description: 'A social networking application where users can post updates, follow others, and interact with content.',
-    image: 'https://picsum.photos/seed/social/600/400',
-    tags: ['React Native', 'Firebase', 'Express'],
+    company: 'Connect Inc.',
+    year: '2023',
+    features: [
+      'Real-time feed updates',
+      'Secure user authentication',
+      'Image and video uploads',
+    ],
+    image: 'https://picsum.photos/seed/social/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'social network'
   },
-  {
+    {
     title: 'Task Management Tool',
-    description: 'A Kanban-style task manager to help teams organize their workflow and track progress.',
-    image: 'https://picsum.photos/seed/task/600/400',
-    tags: ['React', 'Redux', 'Tailwind CSS'],
+    company: 'Productive Solutions',
+    year: '2022',
+    features: [
+      'Drag-and-drop Kanban board',
+      'Team collaboration features',
+      'Customizable notifications',
+    ],
+    image: 'https://picsum.photos/seed/task/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'project management'
   },
   {
     title: 'Blogging Platform',
-    description: 'A simple and elegant platform for writers to publish their articles and reach a wider audience.',
-    image: 'https://picsum.photos/seed/blog/600/400',
-    tags: ['Gatsby', 'GraphQL', 'Markdown'],
+    company: 'Writers Guild',
+    year: '2022',
+    features: [
+      'Markdown editor for posts',
+      'SEO-friendly article structure',
+      'Comment and discussion threads',
+    ],
+    image: 'https://picsum.photos/seed/blog/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'writing reading'
   },
   {
     title: 'Portfolio Generator',
-    description: 'An AI-powered tool that helps developers create a professional portfolio in minutes.',
-    image: 'https://picsum.photos/seed/portfolio/600/400',
-    tags: ['AI', 'Next.js', 'Vercel'],
+    company: 'DevFolio AI',
+    year: '2024',
+    features: [
+      'AI-powered content suggestions',
+      'Multiple modern templates',
+      'One-click deployment',
+    ],
+    image: 'https://picsum.photos/seed/portfolio/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'web design'
   },
   {
     title: 'Weather App',
-    description: 'A clean weather application that provides real-time forecasts using a third-party API.',
-    image: 'https://picsum.photos/seed/weather/600/400',
-    tags: ['React', 'API', 'CSS Modules'],
+    company: 'AtmoCast',
+    year: '2021',
+    features: [
+      'Real-time weather data',
+      '7-day forecast view',
+      'Geolocation for local weather',
+    ],
+    image: 'https://picsum.photos/seed/weather/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'weather forecast'
   },
     {
     title: 'Recipe Finder',
-    description: 'Find thousands of recipes based on ingredients you have at home.',
-    image: 'https://picsum.photos/seed/recipe/600/400',
-    tags: ['Vue.js', 'API', 'Spoonacular'],
+    company: 'Cuisine Finder',
+    year: '2022',
+    features: [
+      'Search recipes by ingredients',
+      'Save favorite recipes',
+      'Nutritional information display',
+    ],
+    image: 'https://picsum.photos/seed/recipe/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'cooking food'
   },
   {
     title: 'URL Shortener',
-    description: 'A microservice to create shortened URLs, similar to Bitly.',
-    image: 'https://picsum.photos/seed/url/600/400',
-    tags: ['Node.js', 'Express', 'SQLite'],
+    company: 'Linkly',
+    year: '2021',
+    features: [
+      'Custom short URLs',
+      'Link click analytics',
+      'API for integration',
+    ],
+    image: 'https://picsum.photos/seed/url/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'internet technology'
   },
   {
     title: 'Chat Application',
-    description: 'A real-time chat application using WebSockets for instant messaging.',
-    image: 'https://picsum.photos/seed/chat/600/400',
-    tags: ['Socket.IO', 'React', 'Node.js'],
+    company: 'QuickChat',
+    year: '2023',
+    features: [
+      'Real-time messaging with WebSockets',
+      'Group chat functionality',
+      'Typing indicators and read receipts',
+    ],
+    image: 'https://picsum.photos/seed/chat/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'communication chat'
   },
   {
     title: 'Fitness Tracker',
-    description: 'An app to log workouts, track progress, and set fitness goals.',
-    image: 'https://picsum.photos/seed/fitness/600/400',
-    tags: ['JavaScript', 'HTML5', 'Chart.js'],
+    company: 'FitTrack',
+    year: '2022',
+    features: [
+      'Log workouts and exercises',
+      'Track personal records',
+      'Progress charts and visualizations',
+    ],
+    image: 'https://picsum.photos/seed/fitness/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'health fitness'
   },
   {
     title: 'Crypto Tracker',
-    description: 'A real-time cryptocurrency tracker with live price charts and portfolio management.',
-    image: 'https://picsum.photos/seed/crypto/600/400',
-    tags: ['React', 'CoinGecko API', 'Chart.js'],
+    company: 'CoinWatch',
+    year: '2023',
+    features: [
+      'Live cryptocurrency prices',
+      'Portfolio value tracking',
+      'Historical price charts',
+    ],
+    image: 'https://picsum.photos/seed/crypto/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'cryptocurrency investment'
   },
   {
     title: 'Learning Platform',
-    description: 'An online platform for courses with video lectures, quizzes, and progress tracking.',
-    image: 'https://picsum.photos/seed/learn/600/400',
-    tags: ['Next.js', 'Stripe', 'Vimeo API'],
+    company: 'EduPro',
+    year: '2024',
+    features: [
+      'Video course streaming',
+      'Interactive quizzes and assignments',
+      'Student progress tracking',
+    ],
+    image: 'https://picsum.photos/seed/learn/800/600',
     github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'education online'
@@ -336,11 +396,11 @@ function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="mb-12 text-center">
+        <div className="mb-16 text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tight">My Projects</h2>
           <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
         </div>
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg-custom:grid-cols-3 xl-custom:grid-cols-4">
+        <div className="grid grid-cols-1 gap-16">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
