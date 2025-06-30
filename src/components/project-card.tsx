@@ -50,12 +50,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <div className="perspective-[1000px]">
       <div
         ref={cardRef}
-        className="transform-style-3d will-change-transform bg-card border border-border rounded-xl text-card-foreground shadow-lg transition-transform duration-300 ease-out hover:shadow-primary/20 hover:shadow-2xl"
+        className="group transform-style-3d will-change-transform bg-card border border-border rounded-xl text-card-foreground shadow-lg transition-transform duration-300 ease-out hover:shadow-primary/20 hover:shadow-2xl"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <div className="transform-style-3d p-1 flex flex-col h-full">
-            <div style={{ transform: 'translateZ(20px)' }} className="aspect-video overflow-hidden border-b rounded-t-lg">
+            <div className="aspect-video overflow-hidden border-b rounded-t-lg [transform:translateZ(20px)]">
               <Image
                   src={project.image}
                   alt={project.title}
@@ -65,14 +65,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   data-ai-hint={project.aiHint}
               />
            </div>
-           <div style={{ transform: 'translateZ(40px)' }} className="p-6 flex-grow">
+           <div className="p-6 flex-grow [transform:translateZ(40px)] transition-transform duration-300 ease-out group-hover:[transform:translateZ(40px)_translateY(-16px)]">
               <h3 className="text-xl font-bold font-headline">{project.title}</h3>
               <div className="mt-2 flex flex-wrap gap-2">
                 {project.tags.map(tag => <Badge key={tag} variant="outline">{tag}</Badge>)}
               </div>
               <p className="mt-4 text-muted-foreground text-sm">{project.description}</p>
            </div>
-           <div style={{ transform: 'translateZ(50px)' }} className="px-6 pb-4 flex justify-end gap-2">
+           <div className="px-6 pb-4 flex justify-end gap-2 [transform:translateZ(50px)] transition-transform duration-300 ease-out group-hover:[transform:translateZ(50px)_translateY(-16px)]">
             <Button variant="outline" size="sm" asChild>
               <Link href={project.github} target="_blank" rel="noopener noreferrer">
                 <Github className="mr-1 h-4 w-4" />
