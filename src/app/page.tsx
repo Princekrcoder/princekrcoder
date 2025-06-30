@@ -17,7 +17,7 @@ const projects = [
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
     image: 'https://placehold.co/600x400.png',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'e-commerce website'
   },
@@ -26,7 +26,7 @@ const projects = [
     description: 'A social networking application where users can post updates, follow others, and interact with content.',
     image: 'https://picsum.photos/seed/social/600/400',
     tags: ['React Native', 'Firebase', 'Express'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'social network'
   },
@@ -35,7 +35,7 @@ const projects = [
     description: 'A Kanban-style task manager to help teams organize their workflow and track progress.',
     image: 'https://picsum.photos/seed/task/600/400',
     tags: ['React', 'Redux', 'Tailwind CSS'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'project management'
   },
@@ -44,7 +44,7 @@ const projects = [
     description: 'A simple and elegant platform for writers to publish their articles and reach a wider audience.',
     image: 'https://picsum.photos/seed/blog/600/400',
     tags: ['Gatsby', 'GraphQL', 'Markdown'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'writing reading'
   },
@@ -53,7 +53,7 @@ const projects = [
     description: 'An AI-powered tool that helps developers create a professional portfolio in minutes.',
     image: 'https://picsum.photos/seed/portfolio/600/400',
     tags: ['AI', 'Next.js', 'Vercel'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'web design'
   },
@@ -62,7 +62,7 @@ const projects = [
     description: 'A clean weather application that provides real-time forecasts using a third-party API.',
     image: 'https://picsum.photos/seed/weather/600/400',
     tags: ['React', 'API', 'CSS Modules'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'weather forecast'
   },
@@ -71,7 +71,7 @@ const projects = [
     description: 'Find thousands of recipes based on ingredients you have at home.',
     image: 'https://picsum.photos/seed/recipe/600/400',
     tags: ['Vue.js', 'API', 'Spoonacular'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'cooking food'
   },
@@ -80,7 +80,7 @@ const projects = [
     description: 'A microservice to create shortened URLs, similar to Bitly.',
     image: 'https://picsum.photos/seed/url/600/400',
     tags: ['Node.js', 'Express', 'SQLite'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'internet technology'
   },
@@ -89,7 +89,7 @@ const projects = [
     description: 'A real-time chat application using WebSockets for instant messaging.',
     image: 'https://picsum.photos/seed/chat/600/400',
     tags: ['Socket.IO', 'React', 'Node.js'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'communication chat'
   },
@@ -98,7 +98,7 @@ const projects = [
     description: 'An app to log workouts, track progress, and set fitness goals.',
     image: 'https://picsum.photos/seed/fitness/600/400',
     tags: ['JavaScript', 'HTML5', 'Chart.js'],
-    github: 'https://github.com',
+    github: 'https://github.com/Princekrcoder',
     live: '#',
     aiHint: 'health fitness'
   },
@@ -165,7 +165,7 @@ function HeroSection() {
       </div>
       <div className="flex gap-4">
         <Button asChild>
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" /> GitHub
           </Link>
         </Button>
@@ -271,7 +271,7 @@ function Footer() {
         </div>
         <div className="flex gap-4">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-6 w-6" />
             </Link>
           </Button>
