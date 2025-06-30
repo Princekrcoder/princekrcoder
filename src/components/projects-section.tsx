@@ -6,90 +6,13 @@ import { ProjectCard } from './project-card';
 
 const projects = [
   {
-    title: 'Learning Management System',
-    company: 'EduTech Innovators',
+    title: 'E-commerce Platform',
+    company: 'Retail Co.',
     year: '2023',
     achievements: [
-      'Developed an interactive course builder, increasing content creation by 40%.',
-      'Integrated a real-time progress tracking system for students and instructors.',
-      'Achieved a 99.9% platform uptime during peak online learning hours.',
-    ],
-    live: '#',
-  },
-  {
-    title: 'Centralized Admin Panel',
-    company: 'Data Corp',
-    year: '2023',
-    achievements: [
-      'Built a dynamic dashboard for real-time data visualization and reporting.',
-      'Implemented role-based access control for over 500 users.',
-      'Streamlined data management tasks, reducing administrative time by 30%.',
-    ],
-    live: '#',
-  },
-  {
-    title: 'Content-Rich Blog Platform',
-    company: "Writer's Hub",
-    year: '2022',
-    achievements: [
-      'Engineered a SEO-optimized platform, boosting organic traffic by 50%.',
-      'Created a markdown editor for a seamless writing and publishing experience.',
-      'Integrated social sharing features, increasing article reach by 20%.',
-    ],
-    live: '#',
-  },
-    {
-    title: 'Real Estate Marketplace',
-    company: 'HomeFinder',
-    year: '2022',
-    achievements: [
-      'Developed an advanced property search with filters, improving user experience.',
-      'Integrated interactive maps for property location visualization.',
-      'Secured user data and listings with robust authentication and validation.',
-    ],
-    live: '#',
-  },
-  {
-    title: 'Social Media App',
-    company: 'Connect Inc.',
-    year: '2023',
-    achievements: [
-      'Increased user engagement by 25% with real-time chat and notifications.',
-      'Implemented secure authentication, protecting over 10,000 user accounts.',
-      'Managed scalable media uploads using cloud storage solutions.',
-    ],
-    live: '#',
-  },
-    {
-    title: 'Personal Portfolio Website',
-    company: 'Freelance',
-    year: '2024',
-    achievements: [
-      'Designed a visually appealing and responsive portfolio to showcase skills.',
-      'Optimized for performance, achieving high scores on Lighthouse.',
-      'Integrated a contact form for seamless communication with potential clients.',
-    ],
-    live: '#',
-  },
-  {
-    title: 'Comprehensive Job Portal',
-    company: 'CareerConnect',
-    year: '2021',
-    achievements: [
-      'Built a powerful job search engine with advanced filtering capabilities.',
-      'Enabled employers to post and manage job listings efficiently.',
-      'Facilitated thousands of successful job applications through the platform.',
-    ],
-    live: '#',
-  },
-    {
-    title: 'Real-Time Chat Application',
-    company: 'Instant Messenger',
-    year: '2022',
-    achievements: [
-      'Implemented WebSocket for instant message delivery and real-time updates.',
-      'Ensured end-to-end encryption for secure private conversations.',
-      'Developed a user-friendly interface with support for group chats and media sharing.',
+      'Boosted conversion rates by 15% with a streamlined checkout process.',
+      'Reduced page load times by 40% through server-side rendering with Next.js.',
+      'Ensured 99.9% uptime by deploying on a scalable Vercel architecture.',
     ],
     live: '#',
   },
@@ -105,13 +28,90 @@ const projects = [
     live: '#',
   },
   {
-    title: 'E-commerce Platform',
-    company: 'Retail Co.',
+    title: 'Real-Time Chat Application',
+    company: 'Instant Messenger',
+    year: '2022',
+    achievements: [
+      'Implemented WebSocket for instant message delivery and real-time updates.',
+      'Ensured end-to-end encryption for secure private conversations.',
+      'Developed a user-friendly interface with support for group chats and media sharing.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Comprehensive Job Portal',
+    company: 'CareerConnect',
+    year: '2121',
+    achievements: [
+      'Built a powerful job search engine with advanced filtering capabilities.',
+      'Enabled employers to post and manage job listings efficiently.',
+      'Facilitated thousands of successful job applications through the platform.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Personal Portfolio Website',
+    company: 'Freelance',
+    year: '2024',
+    achievements: [
+      'Designed a visually appealing and responsive portfolio to showcase skills.',
+      'Optimized for performance, achieving high scores on Lighthouse.',
+      'Integrated a contact form for seamless communication with potential clients.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Social Media App',
+    company: 'Connect Inc.',
     year: '2023',
     achievements: [
-      'Boosted conversion rates by 15% with a streamlined checkout process.',
-      'Reduced page load times by 40% through server-side rendering with Next.js.',
-      'Ensured 99.9% uptime by deploying on a scalable Vercel architecture.',
+      'Increased user engagement by 25% with real-time chat and notifications.',
+      'Implemented secure authentication, protecting over 10,000 user accounts.',
+      'Managed scalable media uploads using cloud storage solutions.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Real Estate Marketplace',
+    company: 'HomeFinder',
+    year: '2022',
+    achievements: [
+      'Developed an advanced property search with filters, improving user experience.',
+      'Integrated interactive maps for property location visualization.',
+      'Secured user data and listings with robust authentication and validation.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Content-Rich Blog Platform',
+    company: "Writer's Hub",
+    year: '2022',
+    achievements: [
+      'Engineered a SEO-optimized platform, boosting organic traffic by 50%.',
+      'Created a markdown editor for a seamless writing and publishing experience.',
+      'Integrated social sharing features, increasing article reach by 20%.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Centralized Admin Panel',
+    company: 'Data Corp',
+    year: '2023',
+    achievements: [
+      'Built a dynamic dashboard for real-time data visualization and reporting.',
+      'Implemented role-based access control for over 500 users.',
+      'Streamlined data management tasks, reducing administrative time by 30%.',
+    ],
+    live: '#',
+  },
+  {
+    title: 'Learning Management System',
+    company: 'EduTech Innovators',
+    year: '2023',
+    achievements: [
+      'Developed an interactive course builder, increasing content creation by 40%.',
+      'Integrated a real-time progress tracking system for students and instructors.',
+      'Achieved a 99.9% platform uptime during peak online learning hours.',
     ],
     live: '#',
   },
@@ -133,16 +133,13 @@ export function ProjectsSection() {
           See how I transformed concepts into engaging digital experiences.
         </p>
       </div>
-      {/* Increased height to allow for more scroll distance for the animation */}
-      <div ref={ref} className="container mx-auto max-w-3xl relative h-[800vh]">
+      <div ref={ref} className="container mx-auto max-w-3xl relative h-[400vh]">
         {projects.map((project, i) => {
-          // Cards at the back of the stack are smaller and scale up as they come to the front.
           const targetScale = 1 - (projects.length - i - 1) * 0.05;
           const scale = useTransform(scrollYProgress, [0, 1], [targetScale, 1]);
 
-          // Animate the vertical position to create the initial distance and then overlap.
-          const initialSeparation = 12; // rem
-          const finalOverlap = 4; // rem
+          const initialSeparation = 2;
+          const finalOverlap = 1;
           const top = useTransform(
             scrollYProgress,
             [0, 1],
