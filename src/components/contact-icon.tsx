@@ -12,11 +12,17 @@ export function ContactIcon({ className }: { className?: string }) {
       strokeLinejoin="round"
       className={className}
     >
-      <path d="M3 14V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v9" />
-      <path d="M2 18h18" />
-      <circle cx="9" cy="9" r="2" />
-      <path d="M6 14a3 3 0 0 1 6 0" />
-      <path d="M16 4h4a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2l-2 2V11h-2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+      {/* Desk */}
+      <path d="M2.5 18c3-1.5 15-1.5 18 0" />
+
+      {/* Laptop */}
+      <path d="M3.5 18V9.5C3.5 8.67 4.17 8 5 8h7c.83 0 1.5.67 1.5 1.5V18" />
+      <circle cx="8.5" cy="11" r=".5" fill="currentColor" strokeWidth="0" />
+
+      {/* Person and headset */}
+      <path d="M15 18v-4.5a2.5 2.5 0 0 1 2.5-2.5h1" />
+      <path d="M17.5 11a4 4 0 0 1 4-4h0a3 3 0 0 1 3 3v2.5" />
+      <path d="M17.5 14.5a1 1 0 0 1-1-1v-2" />
     </svg>
   );
 }
