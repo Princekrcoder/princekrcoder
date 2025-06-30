@@ -13,18 +13,24 @@ const skillsData = {
     { name: 'JavaScript (ES6+)', level: 90 },
     { name: 'TypeScript', level: 80 },
     { name: 'HTML5 & CSS3', level: 98 },
+    { name: 'Redux', level: 75 },
+    { name: 'GraphQL', level: 70 },
   ],
   backend: [
     { name: 'Node.js', level: 80 },
     { name: 'Express.js', level: 85 },
     { name: 'MongoDB', level: 75 },
     { name: 'Firebase', level: 70 },
+    { name: 'SQLite', level: 65 },
+    { name: 'Socket.IO', level: 75 },
   ],
   tools: [
     { name: 'Git & GitHub', level: 90 },
     { name: 'C++', level: 95 },
     { name: 'Data Structures', level: 90 },
     { name: 'Algorithms', level: 90 },
+    { name: 'Vercel', level: 85 },
+    { name: 'API Integration', level: 85 },
   ],
 };
 
