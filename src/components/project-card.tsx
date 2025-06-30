@@ -50,12 +50,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <div className="perspective-[1000px]">
       <div
         ref={cardRef}
-        className="group transform-style-3d will-change-transform bg-card border border-border rounded-xl text-card-foreground shadow-lg transition-transform duration-300 ease-out hover:shadow-primary/20 hover:shadow-2xl"
+        className="group transform-style-3d will-change-transform bg-card/10 backdrop-blur-sm border border-border/20 rounded-xl text-card-foreground shadow-lg transition-transform duration-300 ease-out hover:shadow-primary/20 hover:shadow-2xl"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <div className="transform-style-3d p-1 flex flex-col h-full">
-            <div className="aspect-video overflow-hidden border-b rounded-t-lg [transform:translateZ(20px)]">
+            <div className="aspect-video overflow-hidden border-b border-border/20 rounded-t-lg [transform:translateZ(20px)]">
               <Image
                   src={project.image}
                   alt={project.title}
@@ -66,7 +66,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
            </div>
            <div className="p-6 flex-grow flex flex-col [transform:translateZ(40px)]">
-              <h3 className="inline-block rounded-lg text-xl font-bold font-headline transition-all duration-300 ease-out hover:-translate-y-0.5 [text-shadow:0_0_96px_hsl(var(--primary))]">{project.title}</h3>
+              <h3 className="inline-block rounded-lg text-xl font-bold font-headline transition-all duration-300 ease-out [text-shadow:0_0_96px_hsl(var(--primary))]">
+                <span className="transition-transform duration-300 ease-out hover:-translate-y-0.5 inline-block">{project.title}</span>
+              </h3>
               <div className="mt-2 flex flex-wrap gap-2">
                 {project.tags.map(tag => <Badge key={tag} variant="outline" className="transition-transform duration-300 ease-out hover:-translate-y-0.5">{tag}</Badge>)}
               </div>
