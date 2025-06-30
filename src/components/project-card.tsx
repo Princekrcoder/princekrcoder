@@ -3,7 +3,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface ProjectCardProps {
   project: {
@@ -37,6 +39,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </li>
             ))}
           </ul>
+          <Button asChild variant="outline" className="bg-transparent border-muted-foreground/50 hover:bg-slate-800 hover:text-foreground self-start">
+            <Link href={project.live} target="_blank" rel="noopener noreferrer">
+              Visit Live Site
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
         <div className="aspect-video rounded-lg overflow-hidden bg-slate-900">
            <Image

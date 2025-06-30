@@ -81,7 +81,7 @@ export function ProjectsSection() {
         <div className="container mx-auto max-w-3xl px-4 text-center mb-16">
             <h2 className="font-headline text-4xl font-bold tracking-tight">Featured Projects</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-                A selection of my work that showcases my skills and passion for development.
+                See how I transformed concepts into engaging digital experiences.
             </p>
         </div>
         <div className="container mx-auto max-w-3xl px-4 mt-12 space-y-[-22rem]">
@@ -91,8 +91,14 @@ export function ProjectsSection() {
                 key={project.title}
                 style={{
                   zIndex: projects.length - i,
+                  transformOrigin: 'top center',
+                  top: `calc(${i * 3}rem)`,
                 }}
-                className="sticky top-28 md:top-36 w-full"
+                animate={{ 
+                  scale: `calc(1 - ${0.1 * (projects.length - 1 - i)})`,
+                  y: `calc(${i * -1}rem)`,
+                }}
+                className="sticky w-full"
               >
                 <ProjectCard project={project} />
               </motion.div>
