@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { CodeXml, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
+import { ProjectCard } from '@/components/project-card';
 
 const projects = [
   {
@@ -195,43 +196,9 @@ function ProjectsSection() {
           <h2 className="font-headline text-4xl font-bold tracking-tight">My Projects</h2>
           <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-               <div className="aspect-video overflow-hidden border-b">
-                  <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={400}
-                      className="h-full w-full object-cover"
-                      data-ai-hint={project.aiHint}
-                  />
-               </div>
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                 <div className="mt-2 flex flex-wrap gap-2">
-                  {project.tags.map(tag => <Badge key={tag} variant="outline">{tag}</Badge>)}
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <CardDescription>{project.description}</CardDescription>
-              </CardContent>
-              <CardFooter className="flex justify-end gap-2 pt-4">
-                <Button variant="outline" size="sm" asChild>
-                  <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-1 h-4 w-4" />
-                    GitHub
-                  </Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href={project.live} target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                    <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>

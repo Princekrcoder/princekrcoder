@@ -58,3 +58,10 @@
     scroll-behavior: smooth;
   }
 }
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.will-change-transform {
+  will-change: transform;
+}
