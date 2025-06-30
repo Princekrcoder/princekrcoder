@@ -141,7 +141,7 @@ function HeroSection() {
       <DeveloperAnimation />
       <div className="flex flex-col gap-2">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
-          Prince Kumar
+          Hi, I'm Prince Kumar
         </h1>
         <p className="max-w-2xl text-lg text-muted-foreground">
           I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.
