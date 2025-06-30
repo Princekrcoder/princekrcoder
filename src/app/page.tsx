@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, MessageSquare } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
-    aiHint: 'ecommoerce website'
+    aiHint: 'e-commerce website'
   },
   {
     title: 'Social Media App',
@@ -113,6 +114,20 @@ export default function Home() {
         <ProjectsSection />
       </main>
       <Footer />
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button asChild className="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full shadow-lg transition-transform hover:scale-110" size="icon">
+              <Link href="#contact" aria-label="Get in touch">
+                <MessageSquare className="h-8 w-8" />
+              </Link>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Get in touch</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   );
 }
