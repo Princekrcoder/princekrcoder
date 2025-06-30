@@ -117,11 +117,9 @@ export default function Home() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button asChild size="icon" className="fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full shadow-lg transition-all duration-300 hover:scale-110">
-                <Link href="#contact" aria-label="Get in touch">
-                  <Send className="h-6 w-6" />
-                </Link>
-            </Button>
+            <Link href="#contact" aria-label="Get in touch" className="fixed bottom-8 right-8 z-50 text-primary transition-transform duration-300 hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-full p-2">
+              <Send className="h-10 w-10" />
+            </Link>
           </TooltipTrigger>
           <TooltipContent side="left" sideOffset={10}>
             <p>Get in touch</p>
