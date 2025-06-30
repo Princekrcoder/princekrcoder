@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useRef } from 'react';
@@ -81,6 +82,8 @@ export function ProjectsSection() {
       offset: ["start start", "end end"],
     });
 
+    const PEEK_HEIGHT = 64;
+
   return (
     <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-slate-950 to-black">
         <div className="container mx-auto max-w-3xl px-4 text-center mb-16">
@@ -89,19 +92,21 @@ export function ProjectsSection() {
                 A selection of my work that showcases my skills and passion for development.
             </p>
         </div>
-        <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 relative h-[300vh]">
+        <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 relative h-[400vh]">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i - 1) * 0.05;
-            const scale = useTransform(
-              scrollYProgress,
-              [i / projects.length, 1],
-              [1, targetScale]
+            const y = useTransform(
+                scrollYProgress,
+                [0, 1],
+                [`${i * PEEK_HEIGHT}px`, `${(i - projects.length) * PEEK_HEIGHT}px`]
             );
-
+            
             return (
               <motion.div
                 key={project.title}
-                style={{ scale }}
+                style={{
+                  y,
+                  zIndex: projects.length - i,
+                }}
                 className="sticky top-28 md:top-36"
               >
                 <ProjectCard project={project} />
