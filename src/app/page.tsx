@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeXml, Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import { SkillsSection } from '@/components/skills-section';
 
 const projects = [
   {
@@ -99,11 +100,6 @@ const projects = [
   },
 ];
 
-const skills = [
-  'C++', 'Data Structures', 'Algorithms', 'React', 'Next.js', 'Node.js',
-  'Express', 'MongoDB', 'Firebase', 'Tailwind CSS', 'Git', 'GitHub'
-];
-
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -111,6 +107,7 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
+        <SkillsSection />
         <ProjectsSection />
       </main>
       <Footer />
@@ -126,6 +123,8 @@ function Header() {
           Princefolio
         </Link>
         <nav className="flex items-center space-x-6 text-sm font-medium">
+          <Link href="#about" className="transition-colors hover:text-primary">About</Link>
+          <Link href="#skills" className="transition-colors hover:text-primary">Skills</Link>
           <Link href="#projects" className="transition-colors hover:text-primary">Projects</Link>
           <Link href="#contact" className="transition-colors hover:text-primary">Contact</Link>
         </nav>
@@ -181,15 +180,9 @@ function AboutSection() {
                     </div>
                     <div className="md:col-span-2">
                         <h2 className="font-headline text-3xl font-bold tracking-tight mb-4">About Me</h2>
-                        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                        <p className="text-muted-foreground text-lg leading-relaxed">
                             I am a passionate and dedicated full-stack developer with a strong foundation in computer science. My journey in technology is driven by a love for problem-solving and building efficient, scalable applications. I thrive on challenges and have honed my analytical skills by solving over 600 Data Structures and Algorithms problems using C++.
                         </p>
-                         <h3 className="font-headline text-2xl font-bold tracking-tight mb-4">My Skills</h3>
-                         <div className="flex flex-wrap gap-2">
-                            {skills.map(skill => (
-                                <Badge key={skill} variant="default" className="text-sm bg-primary/10 text-primary hover:bg-primary/20 border border-primary/20">{skill}</Badge>
-                            ))}
-                         </div>
                     </div>
                 </div>
             </div>
