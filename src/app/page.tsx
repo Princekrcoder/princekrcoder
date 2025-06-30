@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Mail } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
@@ -338,6 +338,11 @@ function Footer() {
            <Button variant="ghost" size="icon" asChild>
             <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Discord">
               <DiscordIcon className="h-6 w-6" />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="mailto:princekr2840@gmail.com" aria-label="Email">
+              <Mail className="h-6 w-6" />
             </Link>
           </Button>
         </div>
