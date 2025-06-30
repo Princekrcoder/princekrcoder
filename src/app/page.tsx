@@ -304,7 +304,7 @@ function ProjectsSection() {
           <h2 className="font-headline text-4xl font-bold tracking-tight">My Projects</h2>
           <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
         </div>
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
