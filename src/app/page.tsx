@@ -17,7 +17,7 @@ const projects = [
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
-    aiHint: 'online shopping'
+    aiHint: 'ecommoerce website'
   },
   {
     title: 'Social Media App',
@@ -216,8 +216,8 @@ function AboutSection() {
                                 <Briefcase className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold">Project Management</h4>
-                                <p className="text-muted-foreground mt-1">Leading projects from conception to completion with agile methodologies.</p>
+                                <h4 className="text-xl font-bold">Freelance Project Delivery</h4>
+                                <p className="text-muted-foreground mt-1">Successfully delivered 20+ client projects, managing everything from development to deployment.</p>
                             </div>
                         </div>
                     </div>
