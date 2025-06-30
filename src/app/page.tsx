@@ -174,7 +174,7 @@ function AboutSection() {
                         About <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Me</span>
                     </h2>
                 </div>
-                <div className="grid md:grid-cols-2 gap-16 items-start">
+                <div className="grid md:grid-cols-2 gap-8 items-start">
                     <div className="flex flex-col gap-6">
                         <h3 className="font-headline text-2xl font-bold">Passionate Web Developer & Tech Creator</h3>
                         <p className="text-muted-foreground text-lg leading-relaxed">
