@@ -20,6 +20,8 @@ const skillsData = [
   { name: 'GraphQL', level: 60, category: 'tools' },
   { name: 'Git/GitHub', level: 90, category: 'tools' },
   { name: 'C++', level: 95, category: 'tools' },
+  { name: 'C', level: 85, category: 'tools' },
+  { name: 'Java', level: 80, category: 'tools' },
   { name: 'Data Structures', level: 90, category: 'tools' },
   { name: 'Algorithms', level: 90, category: 'tools' },
   { name: 'Vercel', level: 85, category: 'tools' },
