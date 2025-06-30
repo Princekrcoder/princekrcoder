@@ -49,7 +49,7 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects" className="relative">
+    <section id="projects" className="relative pb-20 md:pb-32">
       <div className="container mx-auto max-w-7xl px-4 text-center py-20 md:py-32">
         <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground">Featured Projects</h2>
         <p className="mt-4 text-lg text-muted-foreground">
