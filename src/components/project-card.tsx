@@ -66,18 +66,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
            </div>
            <div className="p-6 flex-grow flex flex-col [transform:translateZ(40px)]">
-              <div className="transition-transform duration-300 ease-out hover:-translate-y-4">
+              <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
                 <h3 className="text-xl font-bold font-headline">{project.title}</h3>
               </div>
-              <div className="mt-2 flex flex-wrap gap-2 transition-transform duration-300 ease-out hover:-translate-y-4">
+              <div className="mt-2 flex flex-wrap gap-2 transition-transform duration-300 ease-out hover:-translate-y-1">
                 {project.tags.map(tag => <Badge key={tag} variant="outline">{tag}</Badge>)}
               </div>
-              <div className="flex-grow mt-4 transition-transform duration-300 ease-out hover:-translate-y-4">
+              <div className="flex-grow mt-4 transition-transform duration-300 ease-out hover:-translate-y-1">
                 <p className="text-muted-foreground text-sm">{project.description}</p>
               </div>
            </div>
            <div className="px-6 pb-4 flex justify-end gap-2 [transform:translateZ(50px)]">
-            <div className="transition-transform duration-300 ease-out hover:-translate-y-4">
+            <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
               <Button variant="outline" size="sm" asChild>
                 <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github className="mr-1 h-4 w-4" />
@@ -85,7 +85,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 </Link>
               </Button>
             </div>
-            <div className="transition-transform duration-300 ease-out hover:-translate-y-4">
+            <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
               <Button size="sm" asChild>
                 <Link href={project.live} target="_blank" rel="noopener noreferrer">
                   Live Demo
