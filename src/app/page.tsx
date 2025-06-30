@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/ecom/600/400',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'Social Media App',
     description: 'A social networking application where users can post updates, follow others, and interact with content.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/social/600/400',
     tags: ['React Native', 'Firebase', 'Express'],
     github: 'https://github.com',
     live: '#',
@@ -30,7 +30,7 @@ const projects = [
   {
     title: 'Task Management Tool',
     description: 'A Kanban-style task manager to help teams organize their workflow and track progress.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/task/600/400',
     tags: ['React', 'Redux', 'Tailwind CSS'],
     github: 'https://github.com',
     live: '#',
@@ -39,7 +39,7 @@ const projects = [
   {
     title: 'Blogging Platform',
     description: 'A simple and elegant platform for writers to publish their articles and reach a wider audience.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/blog/600/400',
     tags: ['Gatsby', 'GraphQL', 'Markdown'],
     github: 'https://github.com',
     live: '#',
@@ -48,7 +48,7 @@ const projects = [
   {
     title: 'Portfolio Generator',
     description: 'An AI-powered tool that helps developers create a professional portfolio in minutes.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/portfolio/600/400',
     tags: ['AI', 'Next.js', 'Vercel'],
     github: 'https://github.com',
     live: '#',
@@ -57,7 +57,7 @@ const projects = [
   {
     title: 'Weather App',
     description: 'A clean weather application that provides real-time forecasts using a third-party API.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/weather/600/400',
     tags: ['React', 'API', 'CSS Modules'],
     github: 'https://github.com',
     live: '#',
@@ -66,7 +66,7 @@ const projects = [
     {
     title: 'Recipe Finder',
     description: 'Find thousands of recipes based on ingredients you have at home.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/recipe/600/400',
     tags: ['Vue.js', 'API', 'Spoonacular'],
     github: 'https://github.com',
     live: '#',
@@ -75,7 +75,7 @@ const projects = [
   {
     title: 'URL Shortener',
     description: 'A microservice to create shortened URLs, similar to Bitly.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/url/600/400',
     tags: ['Node.js', 'Express', 'SQLite'],
     github: 'https://github.com',
     live: '#',
@@ -84,7 +84,7 @@ const projects = [
   {
     title: 'Chat Application',
     description: 'A real-time chat application using WebSockets for instant messaging.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/chat/600/400',
     tags: ['Socket.IO', 'React', 'Node.js'],
     github: 'https://github.com',
     live: '#',
@@ -93,7 +93,7 @@ const projects = [
   {
     title: 'Fitness Tracker',
     description: 'An app to log workouts, track progress, and set fitness goals.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://picsum.photos/seed/fitness/600/400',
     tags: ['JavaScript', 'HTML5', 'Chart.js'],
     github: 'https://github.com',
     live: '#',
