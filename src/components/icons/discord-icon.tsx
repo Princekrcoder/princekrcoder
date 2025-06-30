@@ -11,8 +11,8 @@ export function DiscordIcon({ className, ...props }: React.SVGProps<SVGSVGElemen
     >
       <defs>
         <linearGradient id="customDiscordGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#5865F2" />
-          <stop offset="100%" stopColor="#9B59B6" />
+          <stop offset="0%" stopColor="#BB86FC" />
+          <stop offset="100%" stopColor="#5865F2" />
         </linearGradient>
       </defs>
       <rect width="24" height="24" rx="5" ry="5" fill="url(#customDiscordGradient)" />
