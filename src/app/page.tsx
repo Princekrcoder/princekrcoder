@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeXml, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
+import { DeveloperAnimation } from '@/components/developer-animation';
 
 const projects = [
   {
@@ -136,10 +136,7 @@ function Header() {
 function HeroSection() {
   return (
     <section className="container mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 py-20 text-center md:py-32">
-      <Avatar className="h-32 w-32 border-4 border-secondary">
-        <AvatarImage src="https://placehold.co/200x200.png" alt="Prince Kumar" data-ai-hint="man portrait" />
-        <AvatarFallback>PK</AvatarFallback>
-      </Avatar>
+      <DeveloperAnimation />
       <div className="flex flex-col gap-2">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
           Prince Kumar
