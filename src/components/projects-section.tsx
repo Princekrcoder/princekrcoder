@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useRef } from 'react';
@@ -91,8 +90,8 @@ export function ProjectsSection() {
             </p>
         </div>
         <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 space-y-[-18rem] md:space-y-[-22rem]">
-          {projects.map((project, i) => {
-             const y = useTransform(scrollYProgress, [0, 1], [`${(projects.length - i) * 60}px`, '0px']);
+          {[...projects].reverse().map((project, i) => {
+             const y = useTransform(scrollYProgress, [0, 1], ['0px', `${(i) * 60}px`]);
 
             return (
               <motion.div
