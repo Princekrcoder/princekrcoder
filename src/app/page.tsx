@@ -119,7 +119,7 @@ export default function Home() {
 function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
+      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="font-headline text-xl font-bold text-primary">
           Princefolio
         </Link>
@@ -136,7 +136,7 @@ function Header() {
 
 function HeroSection() {
   return (
-    <section className="container mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 py-20 text-center md:py-32">
+    <section className="container mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-20 text-center md:py-32">
       <DeveloperAnimation />
       <div className="flex flex-col gap-2">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
@@ -165,7 +165,7 @@ function HeroSection() {
 function AboutSection() {
     return (
         <section id="about" className="py-16 md:py-24 bg-secondary">
-            <div className="container mx-auto max-w-5xl px-4">
+            <div className="container mx-auto max-w-7xl px-4">
                 <div className="grid md:grid-cols-3 gap-12 items-center">
                     <div className="md:col-span-1">
                         <Card className="overflow-hidden shadow-lg">
@@ -191,12 +191,12 @@ function AboutSection() {
 function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32">
-      <div className="container mx-auto max-w-5xl px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tight">My Projects</h2>
           <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
         </div>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
@@ -209,7 +209,7 @@ function ProjectsSection() {
 function Footer() {
   return (
     <footer id="contact" className="border-t bg-secondary py-12">
-      <div className="container mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-4 text-center md:flex-row">
+      <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center md:flex-row">
         <div className="flex flex-col items-center md:items-start">
             <h3 className="font-headline text-2xl font-bold">Get in Touch</h3>
             <p className="text-muted-foreground mt-1">
@@ -229,7 +229,7 @@ function Footer() {
           </Button>
         </div>
       </div>
-       <div className="container mx-auto mt-8 max-w-5xl px-4 text-center text-sm text-muted-foreground">
+       <div className="container mx-auto mt-8 max-w-7xl px-4 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} Prince Kumar. All Rights Reserved.
       </div>
     </footer>
