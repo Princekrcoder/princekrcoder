@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'md-plus': '800px',
+        'lg-plus': '1124px',
+      },
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
