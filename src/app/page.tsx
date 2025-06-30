@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
@@ -140,10 +141,10 @@ function HeroSection() {
       <DeveloperAnimation />
       <div className="flex flex-col gap-2">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
-          Hi, I'm Prince Kumar
+          Prince Kumar
         </h1>
         <p className="max-w-2xl text-lg text-muted-foreground">
-          Full Stack Developer & Problem Solver. Pursuing BCA at Patliputra University (2022-2025).
+          I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.
         </p>
       </div>
       <div className="flex gap-4">
