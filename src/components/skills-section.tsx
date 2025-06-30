@@ -16,15 +16,12 @@ const skillsData = [
   { name: 'Express', level: 75, category: 'backend' },
   { name: 'MongoDB', level: 70, category: 'backend' },
   { name: 'Firebase', level: 70, category: 'backend' },
-  { name: 'PostgreSQL', level: 65, category: 'backend' },
-  { name: 'GraphQL', level: 60, category: 'tools' },
   { name: 'Git/GitHub', level: 90, category: 'tools' },
   { name: 'C++', level: 95, category: 'tools' },
   { name: 'C', level: 85, category: 'tools' },
   { name: 'Java', level: 80, category: 'tools' },
   { name: 'Data Structures', level: 90, category: 'tools' },
   { name: 'Algorithms', level: 90, category: 'tools' },
-  { name: 'Vercel', level: 85, category: 'tools' },
 ];
 
 const categories = ['all', 'frontend', 'backend', 'tools'];
