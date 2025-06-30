@@ -170,7 +170,7 @@ function HeroSection() {
           </Link>
         </Button>
         <Button variant="secondary" asChild>
-          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/princekrcoder" target="_blank" rel="noopener noreferrer">
             <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
           </Link>
         </Button>
@@ -276,7 +276,7 @@ function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/in/princekrcoder" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6" />
             </Link>
           </Button>
