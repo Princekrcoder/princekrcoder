@@ -66,14 +66,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
            </div>
            <div className="p-6 flex-grow flex flex-col [transform:translateZ(40px)]">
-              <div className="transition-transform duration-300 ease-out hover:-translate-y-1">
-                <h3 className="text-xl font-bold font-headline">{project.title}</h3>
+              <h3 className="text-xl font-bold font-headline transition-all duration-300 ease-out hover:-translate-y-1 hover:text-accent">{project.title}</h3>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {project.tags.map(tag => <Badge key={tag} variant="outline" className="transition-transform duration-300 ease-out hover:-translate-y-1">{tag}</Badge>)}
               </div>
-              <div className="mt-2 flex flex-wrap gap-2 transition-transform duration-300 ease-out hover:-translate-y-1">
-                {project.tags.map(tag => <Badge key={tag} variant="outline">{tag}</Badge>)}
-              </div>
-              <div className="flex-grow mt-4 transition-transform duration-300 ease-out hover:-translate-y-1">
-                <p className="text-muted-foreground text-sm">{project.description}</p>
+              <div className="flex-grow mt-4">
+                <p className="text-muted-foreground text-sm transition-transform duration-300 ease-out hover:-translate-y-1">{project.description}</p>
               </div>
            </div>
            <div className="px-6 pb-4 flex justify-end gap-2 [transform:translateZ(50px)]">
