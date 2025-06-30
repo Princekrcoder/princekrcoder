@@ -102,6 +102,24 @@ const projects = [
     live: '#',
     aiHint: 'health fitness'
   },
+  {
+    title: 'Crypto Tracker',
+    description: 'A real-time cryptocurrency tracker with live price charts and portfolio management.',
+    image: 'https://picsum.photos/seed/crypto/600/400',
+    tags: ['React', 'CoinGecko API', 'Chart.js'],
+    github: 'https://github.com/Princekrcoder',
+    live: '#',
+    aiHint: 'cryptocurrency investment'
+  },
+  {
+    title: 'Learning Platform',
+    description: 'An online platform for courses with video lectures, quizzes, and progress tracking.',
+    image: 'https://picsum.photos/seed/learn/600/400',
+    tags: ['Next.js', 'Stripe', 'Vimeo API'],
+    github: 'https://github.com/Princekrcoder',
+    live: '#',
+    aiHint: 'education online'
+  },
 ];
 
 export default function Home() {
