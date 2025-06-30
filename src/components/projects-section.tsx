@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ProjectCard } from './project-card';
 
 const projects = [
@@ -15,8 +15,6 @@ const projects = [
       'Ensured 99.9% uptime by deploying on a scalable Vercel architecture.',
     ],
     live: '#',
-    imageSrc: 'https://placehold.co/800x600.png',
-    imageHint: 'e-commerce website',
   },
   {
     title: 'Social Media App',
@@ -28,8 +26,6 @@ const projects = [
       'Managed scalable media uploads using cloud storage solutions.',
     ],
     live: '#',
-    imageSrc: 'https://placehold.co/800x600.png',
-    imageHint: 'social media feed',
   },
   {
     title: 'Task Management Tool',
@@ -41,36 +37,49 @@ const projects = [
       'Delivered critical reminders with a customizable notification system.',
     ],
     live: '#',
-    imageSrc: 'https://placehold.co/800x600.png',
-    imageHint: 'kanban board',
   },
 ];
 
 
 export function ProjectsSection() {
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end end'],
+  });
+
   return (
-    <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-slate-950 to-black">
-        <div className="container mx-auto max-w-7xl px-4 text-center mb-16">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-white">Featured Projects</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-                See how I transformed concepts into engaging digital experiences.
-            </p>
-        </div>
-        <div className="container mx-auto max-w-5xl px-4 mt-12 space-y-16">
-          {projects.map((project, i) => {
-            return (
-              <motion.div
-                key={project.title}
-                 initial={{ opacity: 0, y: 50 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true, amount: 0.3 }}
-                 transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
-              >
-                <ProjectCard project={project} />
-              </motion.div>
-            );
-          })}
-        </div>
+    <section id="projects" className="bg-gradient-to-b from-slate-950 to-black">
+      <div className="container mx-auto max-w-7xl px-4 text-center py-20 md:py-32">
+        <h2 className="font-headline text-4xl font-bold tracking-tight text-white">Featured Projects</h2>
+        <p className="mt-4 text-lg text-muted-foreground">
+          See how I transformed concepts into engaging digital experiences.
+        </p>
+      </div>
+      <div ref={ref} className="container mx-auto max-w-3xl relative h-[250vh]">
+        {projects.map((project, i) => {
+          const range: [number, number] = [i / projects.length, (i + 1) / projects.length];
+          const scale = useTransform(scrollYProgress, range, [1, 0.8]);
+          const opacity = useTransform(scrollYProgress, range, [1, 0]);
+
+          return (
+            <motion.div
+              key={project.title}
+              style={{
+                position: 'sticky',
+                top: '15vh',
+                scale,
+                opacity,
+              }}
+              className="w-full"
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          );
+        })}
+      </div>
     </section>
   );
 }
+
+    

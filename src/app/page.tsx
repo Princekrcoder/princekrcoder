@@ -17,8 +17,8 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <ProjectsSection />
         <SkillsSection />
+        <ProjectsSection />
       </main>
       <Footer />
       <TooltipProvider>
@@ -259,3 +259,5 @@ function Footer() {
     </footer>
   );
 }
+
+    
