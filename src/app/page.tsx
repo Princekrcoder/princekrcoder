@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, User, Briefcase } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
@@ -167,23 +167,59 @@ function HeroSection() {
 
 function AboutSection() {
     return (
-        <section id="about" className="py-16 md:py-24">
+        <section id="about" className="py-20 md:py-32">
             <div className="container mx-auto max-w-7xl px-4">
-                <div className="grid md:grid-cols-3 gap-12 items-center">
-                    <div className="md:col-span-1">
-                        <Card className="overflow-hidden shadow-lg">
-                            <CardContent className="p-8 text-center bg-card">
-                                <CodeXml className="mx-auto h-16 w-16 text-primary mb-4" />
-                                <h3 className="font-headline text-5xl font-bold">600+</h3>
-                                <p className="text-muted-foreground">DSA Problems Solved in C++</p>
-                            </CardContent>
-                        </Card>
-                    </div>
-                    <div className="md:col-span-2">
-                        <h2 className="font-headline text-3xl font-bold tracking-tight mb-4">About Me</h2>
+                <div className="text-center mb-16">
+                    <h2 className="font-headline text-4xl font-bold tracking-tight">
+                        About <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Me</span>
+                    </h2>
+                </div>
+                <div className="grid md:grid-cols-2 gap-16 items-start">
+                    <div className="flex flex-col gap-6">
+                        <h3 className="font-headline text-2xl font-bold">Passionate Web Developer & Tech Creator</h3>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            I am a passionate and dedicated full-stack developer with a strong foundation in computer science. My journey in technology is driven by a love for problem-solving and building efficient, scalable applications. I thrive on challenges and have honed my analytical skills by solving over 600 Data Structures and Algorithms problems using C++.
+                            With over 5 years of experience in web development, I specialize in creating responsive, accessible, and performant web applications using modern technologies.
                         </p>
+                        <p className="text-muted-foreground text-lg leading-relaxed">
+                            I'm passionate about creating elegant solutions to complex problems, and I'm constantly learning new technologies and techniques to stay at the forefront of the ever-evolving web landscape.
+                        </p>
+                        <div className="flex gap-4 mt-4">
+                            <Button asChild size="lg">
+                                <Link href="#contact">Get In Touch</Link>
+                            </Button>
+                            <Button asChild variant="outline" size="lg">
+                                <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</Link>
+                            </Button>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-8">
+                        <div className="flex items-start gap-4 p-6 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
+                            <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                                <CodeXml className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold">Web Development</h4>
+                                <p className="text-muted-foreground mt-1">Creating responsive websites and web applications with modern frameworks.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4 p-6 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
+                            <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                                <User className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold">UI/UX Design</h4>
+                                <p className="text-muted-foreground mt-1">Designing intuitive user interfaces and seamless user experiences.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4 p-6 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
+                            <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                                <Briefcase className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold">Project Management</h4>
+                                <p className="text-muted-foreground mt-1">Leading projects from conception to completion with agile methodologies.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
