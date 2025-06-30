@@ -17,7 +17,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group relative rounded-2xl bg-slate-800 p-8 text-card-foreground shadow-2xl shadow-black/40 h-full flex flex-col">
+    <div className="group relative rounded-2xl bg-slate-900 p-8 text-card-foreground shadow-2xl shadow-black/40 h-full flex flex-col">
       <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-20 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
       <div className="absolute inset-0 rounded-2xl border border-primary/20 transition-colors group-hover:border-primary/40" />
       

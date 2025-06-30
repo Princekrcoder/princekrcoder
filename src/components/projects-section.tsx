@@ -1,7 +1,8 @@
+
 'use client';
 
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ProjectCard } from './project-card';
 
 const projects = [
@@ -75,12 +76,6 @@ const projects = [
 
 
 export function ProjectsSection() {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-      target: containerRef,
-      offset: ["start end", "end start"],
-    });
-
   return (
     <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-slate-950 to-black">
         <div className="container mx-auto max-w-3xl px-4 text-center mb-16">
@@ -89,16 +84,13 @@ export function ProjectsSection() {
                 A selection of my work that showcases my skills and passion for development.
             </p>
         </div>
-        <div ref={containerRef} className="container mx-auto max-w-3xl px-4 mt-12 space-y-[-18rem] md:space-y-[-22rem]">
-          {[...projects].reverse().map((project, i) => {
-             const y = useTransform(scrollYProgress, [0, 1], ['0px', `${(i) * 60}px`]);
-
+        <div className="container mx-auto max-w-3xl px-4 mt-12 space-y-[-22rem]">
+          {projects.map((project, i) => {
             return (
               <motion.div
                 key={project.title}
                 style={{
-                  y,
-                  zIndex: i,
+                  zIndex: projects.length - i,
                 }}
                 className="sticky top-28 md:top-36 w-full"
               >
