@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://picsum.photos/seed/commerce/600/400',
+    image: 'https://picsum.photos/seed/ecommerce/600/400',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
@@ -140,7 +140,7 @@ function HeroSection() {
       <DeveloperAnimation />
       <div className="flex flex-col gap-2">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
-          Prince Kumar
+          Hi, I'm Prince Kumar
         </h1>
         <p className="max-w-2xl text-lg text-muted-foreground">
           Full Stack Developer & Problem Solver. Pursuing BCA at Patliputra University (2022-2025).
