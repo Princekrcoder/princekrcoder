@@ -117,12 +117,12 @@ export default function Home() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link href="#contact" aria-label="Get in touch" className="fixed bottom-8 right-8 z-50 text-primary transition-transform duration-300 hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-full p-2">
+            <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Join my Discord" className="fixed bottom-8 right-8 z-50 text-primary transition-transform duration-300 hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               <Send className="h-10 w-10" />
             </Link>
           </TooltipTrigger>
           <TooltipContent side="left" sideOffset={10}>
-            <p>Get in touch</p>
+            <p>Join my Discord</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
