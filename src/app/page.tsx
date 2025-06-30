@@ -353,14 +353,20 @@ function ProjectsSection() {
 function Footer() {
   return (
     <footer id="contact" className="border-t py-12">
-      <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center md:flex-row">
+      <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 text-center md:flex-row md:items-start">
         <div className="flex flex-col items-center md:items-start">
             <h3 className="font-headline text-2xl font-bold">Get in Touch</h3>
-            <p className="text-muted-foreground mt-1">
-                Let's build something amazing together.
+            <p className="text-muted-foreground mt-1 max-w-sm">
+                I'm always open to discussing new projects or opportunities. Feel free to reach out.
             </p>
+             <div className="flex items-center gap-2 mt-4">
+                <Mail className="h-5 w-5 text-muted-foreground" />
+                <a href="mailto:princekr2840@gmail.com" className="font-medium hover:text-primary transition-colors">
+                    princekr2840@gmail.com
+                </a>
+            </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-2">
           <Button variant="ghost" size="icon" asChild>
             <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-6 w-6" />
@@ -374,11 +380,6 @@ function Footer() {
            <Button variant="ghost" size="icon" asChild>
             <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Discord">
               <DiscordIcon className="h-6 w-6" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="mailto:princekr2840@gmail.com" aria-label="Email">
-              <Mail className="h-6 w-6" />
             </Link>
           </Button>
         </div>
