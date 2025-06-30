@@ -272,7 +272,7 @@ function ServicesSection() {
               Building robust, scalable server-side logic and APIs using Node.js, Express, and databases like MongoDB and Firebase.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2 md:col-span-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Rocket className="h-8 w-8 text-primary" />
             </div>
@@ -288,6 +288,15 @@ function ServicesSection() {
             <h3 className="text-xl font-bold mb-2">Career Coach</h3>
             <p className="text-muted-foreground">
               Providing guidance and mentorship to aspiring developers, helping them navigate their career path and land their dream job.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="p-4 bg-primary/10 rounded-full mb-4">
+              <Briefcase className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Portfolio or Resume Website</h3>
+            <p className="text-muted-foreground">
+              Personal branding websites to showcase your skills, resume, and projects. I build SEO-optimized developer portfolios and freelancer resume websites.
             </p>
           </div>
         </div>
