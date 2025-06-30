@@ -43,7 +43,7 @@ const SkillProgressBar = ({ level }: { level: number }) => {
 };
 
 const SkillsContent = ({ skills }: { skills: { name: string; level: number }[] }) => (
-    <Card className="border-2 border-primary/10 shadow-lg">
+    <Card className="border-2 border-primary/10 shadow-lg bg-card/50">
         <CardContent className="pt-6">
             <div className="space-y-6">
                 {skills.map((skill) => (
@@ -62,7 +62,7 @@ const SkillsContent = ({ skills }: { skills: { name: string; level: number }[] }
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20 md:py-32 bg-background">
+    <section id="skills" className="py-20 md:py-32">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tight">Technical Proficiency</h2>
