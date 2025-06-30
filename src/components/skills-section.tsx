@@ -1,100 +1,94 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Progress } from "@/components/ui/progress"
-import { Card, CardContent } from "@/components/ui/card"
+import React, { useState, useMemo } from 'react';
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
-const skillsData = {
-  frontend: [
-    { name: 'React', level: 90 },
-    { name: 'Next.js', level: 85 },
-    { name: 'Tailwind CSS', level: 95 },
-    { name: 'JavaScript (ES6+)', level: 90 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'HTML5 & CSS3', level: 98 },
-    { name: 'Redux', level: 75 },
-    { name: 'GraphQL', level: 70 },
-  ],
-  backend: [
-    { name: 'Node.js', level: 80 },
-    { name: 'Express.js', level: 85 },
-    { name: 'MongoDB', level: 75 },
-    { name: 'Firebase', level: 70 },
-    { name: 'SQLite', level: 65 },
-    { name: 'Socket.IO', level: 75 },
-  ],
-  tools: [
-    { name: 'Git & GitHub', level: 90 },
-    { name: 'C++', level: 95 },
-    { name: 'Data Structures', level: 90 },
-    { name: 'Algorithms', level: 90 },
-    { name: 'Vercel', level: 85 },
-    { name: 'API Integration', level: 85 },
-  ],
-};
+const skillsData = [
+  { name: 'HTML/CSS', level: 95, category: 'frontend' },
+  { name: 'JavaScript', level: 90, category: 'frontend' },
+  { name: 'React', level: 90, category: 'frontend' },
+  { name: 'TypeScript', level: 85, category: 'frontend' },
+  { name: 'Tailwind CSS', level: 90, category: 'frontend' },
+  { name: 'Next.js', level: 80, category: 'frontend' },
+  { name: 'Redux', level: 75, category: 'frontend' },
+  { name: 'Node.js', level: 80, category: 'backend' },
+  { name: 'Express', level: 75, category: 'backend' },
+  { name: 'MongoDB', level: 70, category: 'backend' },
+  { name: 'Firebase', level: 70, category: 'backend' },
+  { name: 'PostgreSQL', level: 65, category: 'backend' },
+  { name: 'GraphQL', level: 60, category: 'tools' },
+  { name: 'Git/GitHub', level: 90, category: 'tools' },
+  { name: 'C++', level: 95, category: 'tools' },
+  { name: 'Data Structures', level: 90, category: 'tools' },
+  { name: 'Algorithms', level: 90, category: 'tools' },
+  { name: 'Vercel', level: 85, category: 'tools' },
+];
 
-const SkillProgressBar = ({ level }: { level: number }) => {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    // Animate the progress bar on mount
-    const timer = setTimeout(() => {
-      setProgress(level);
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [level]);
-
-  return <Progress value={progress} className="h-2 w-full bg-secondary dark:bg-muted [&>div]:bg-gradient-to-r [&>div]:from-primary [&>div]:to-accent" />;
-};
-
-const SkillsContent = ({ skills }: { skills: { name: string; level: number }[] }) => (
-    <Card className="border-2 border-primary/10 shadow-lg bg-card/50">
-        <CardContent className="pt-6">
-            <div className="space-y-6">
-                {skills.map((skill) => (
-                    <div key={skill.name} className="flex flex-col gap-2">
-                        <div className="flex justify-between items-center">
-                            <p className="font-medium text-base text-foreground">{skill.name}</p>
-                            <p className="text-sm text-muted-foreground">{skill.level}%</p>
-                        </div>
-                        <SkillProgressBar level={skill.level} />
-                    </div>
-                ))}
-            </div>
-        </CardContent>
-    </Card>
-);
+const categories = ['all', 'frontend', 'backend', 'tools'];
 
 export function SkillsSection() {
+  const [filter, setFilter] = useState('all');
+
+  const filteredSkills = useMemo(() => {
+    if (filter === 'all') {
+      return skillsData;
+    }
+    return skillsData.filter((skill) => skill.category === filter);
+  }, [filter]);
+
   return (
     <section id="skills" className="py-20 md:py-32">
-      <div className="container mx-auto max-w-5xl px-4">
-        <div className="mb-12 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight">Technical Proficiency</h2>
-          <p className="mt-2 text-lg text-muted-foreground">My expertise across the stack.</p>
+      <div className="container mx-auto max-w-7xl px-4">
+        <div className="mb-16 text-center">
+          <h2 className="font-headline text-4xl font-bold tracking-tight">
+            My <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Skills</span>
+          </h2>
+          <p className="mt-2 text-lg text-muted-foreground">A showcase of my technical abilities and expertise.</p>
         </div>
-        
-        <Tabs defaultValue="frontend" className="w-full">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8 h-auto">
-            <TabsTrigger value="frontend">Frontend</TabsTrigger>
-            <TabsTrigger value="backend">Backend</TabsTrigger>
-            <TabsTrigger value="tools">Tools & Concepts</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="frontend">
-            <SkillsContent skills={skillsData.frontend} />
-          </TabsContent>
-          
-          <TabsContent value="backend">
-            <SkillsContent skills={skillsData.backend} />
-          </TabsContent>
 
-          <TabsContent value="tools">
-            <SkillsContent skills={skillsData.tools} />
-          </TabsContent>
+        <div className="flex justify-center items-center gap-2 md:gap-4 mb-12 flex-wrap">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={filter === category ? 'default' : 'ghost'}
+              onClick={() => setFilter(category)}
+              className="capitalize rounded-full px-6 transition-all duration-300"
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
 
-        </Tabs>
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredSkills.map((skill) => (
+            <motion.div
+              key={skill.name}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-card/50 p-6 rounded-lg border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300"
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="font-semibold text-lg text-foreground">{skill.name}</h3>
+                <span className="text-muted-foreground font-mono">{skill.level}%</span>
+              </div>
+              <div className="w-full bg-muted/50 rounded-full h-2 overflow-hidden">
+                <motion.div
+                  className="bg-primary h-2 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${skill.level}%` }}
+                  transition={{ duration: 1, ease: "circOut" }}
+                />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
