@@ -49,9 +49,9 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects" className="bg-gradient-to-b from-slate-950 to-black">
+    <section id="projects">
       <div className="container mx-auto max-w-7xl px-4 text-center py-20 md:py-32">
-        <h2 className="font-headline text-4xl font-bold tracking-tight text-white">Featured Projects</h2>
+        <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground">Featured Projects</h2>
         <p className="mt-4 text-lg text-muted-foreground">
           See how I transformed concepts into engaging digital experiences.
         </p>
@@ -81,5 +81,3 @@ export function ProjectsSection() {
     </section>
   );
 }
-
-    
