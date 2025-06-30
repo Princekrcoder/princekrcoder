@@ -1,8 +1,7 @@
 
 'use client';
 
-import React, { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import React from 'react';
 import { ProjectCard } from './project-card';
 
 const projects = [
@@ -90,100 +89,10 @@ const projects = [
     live: '#',
     aiHint: 'weather forecast'
   },
-    {
-    title: 'Recipe Finder',
-    company: 'Cuisine Finder',
-    year: '2022',
-    features: [
-      'Search recipes by ingredients',
-      'Save favorite recipes',
-      'Nutritional information display',
-    ],
-    image: 'https://picsum.photos/seed/recipe/800/600',
-    github: 'https://github.com/Princekrcoder',
-    live: '#',
-    aiHint: 'cooking food'
-  },
-  {
-    title: 'URL Shortener',
-    company: 'Linkly',
-    year: '2021',
-    features: [
-      'Custom short URLs',
-      'Link click analytics',
-      'API for integration',
-    ],
-    image: 'https://picsum.photos/seed/url/800/600',
-    github: 'https://github.com/Princekrcoder',
-    live: '#',
-    aiHint: 'internet technology'
-  },
-  {
-    title: 'Chat Application',
-    company: 'QuickChat',
-    year: '2023',
-    features: [
-      'Real-time messaging with WebSockets',
-      'Group chat functionality',
-      'Typing indicators and read receipts',
-    ],
-    image: 'https://picsum.photos/seed/chat/800/600',
-    github: 'https://github.com/Princekrcoder',
-    live: '#',
-    aiHint: 'communication chat'
-  },
-  {
-    title: 'Fitness Tracker',
-    company: 'FitTrack',
-    year: '2022',
-    features: [
-      'Log workouts and exercises',
-      'Track personal records',
-      'Progress charts and visualizations',
-    ],
-    image: 'https://picsum.photos/seed/fitness/800/600',
-    github: 'https://github.com/Princekrcoder',
-    live: '#',
-    aiHint: 'health fitness'
-  },
-  {
-    title: 'Crypto Tracker',
-    company: 'CoinWatch',
-    year: '2023',
-    features: [
-      'Live cryptocurrency prices',
-      'Portfolio value tracking',
-      'Historical price charts',
-    ],
-    image: 'https://picsum.photos/seed/crypto/800/600',
-    github: 'https://github.com/Princekrcoder',
-    live: '#',
-    aiHint: 'cryptocurrency investment'
-  },
-  {
-    title: 'Learning Platform',
-    company: 'EduPro',
-    year: '2024',
-    features: [
-      'Video course streaming',
-      'Interactive quizzes and assignments',
-      'Student progress tracking',
-    ],
-    image: 'https://picsum.photos/seed/learn/800/600',
-    github: 'https://github.com/Princekrcoder',
-    live: '#',
-    aiHint: 'education online'
-  },
 ];
 
 
 export function ProjectsSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
-
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4">
@@ -191,22 +100,13 @@ export function ProjectsSection() {
           <h2 className="font-headline text-4xl font-bold tracking-tight">My Projects</h2>
           <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
         </div>
-      </div>
-      <div ref={containerRef} className="relative" style={{ height: `${projects.length * 50}vh` }}>
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-            {projects.map((project, index) => {
-              const targetScale = 1 - ((projects.length - index) * 0.05);
-              return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
                 <ProjectCard
                   key={project.title}
                   project={project}
-                  index={index}
-                  progress={scrollYProgress}
-                  range={[index / projects.length, (index + 1) / projects.length]}
-                  targetScale={targetScale}
                 />
-              );
-            })}
+            ))}
         </div>
       </div>
     </section>
