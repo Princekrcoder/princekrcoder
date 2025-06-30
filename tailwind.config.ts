@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'md-plus': '800px',
-        'lg-plus': '1124px',
+        'lg-custom': '920px',
+        'xl-custom': '1224px',
       },
       fontFamily: {
         body: ['Inter', 'sans-serif'],
