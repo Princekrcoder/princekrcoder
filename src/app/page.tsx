@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Mail } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Mail, Handshake } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
@@ -253,7 +253,7 @@ function ServicesSection() {
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">What I can do for you.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <LayoutTemplate className="h-8 w-8 text-primary" />
@@ -272,7 +272,7 @@ function ServicesSection() {
               Building robust, scalable server-side logic and APIs using Node.js, Express, and databases like MongoDB and Firebase.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2 md:col-span-2">
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Rocket className="h-8 w-8 text-primary" />
             </div>
@@ -297,6 +297,15 @@ function ServicesSection() {
             <h3 className="text-xl font-bold mb-2">Portfolio or Resume Website</h3>
             <p className="text-muted-foreground">
               Personal branding websites to showcase your skills, resume, and projects. I build SEO-optimized developer portfolios and freelancer resume websites.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="p-4 bg-primary/10 rounded-full mb-4">
+              <Handshake className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Open Source Contribution Help</h3>
+            <p className="text-muted-foreground">
+              I help projects grow by contributing clean code, fixing bugs, and documenting.
             </p>
           </div>
         </div>
