@@ -119,7 +119,7 @@ export default function Home() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="#contact" aria-label="Get in touch" className="fixed bottom-8 right-8 z-50 transition-all duration-300 hover:scale-110">
-              <ContactIcon className="h-10 w-10 text-primary" />
+              <ContactIcon className="h-10 w-10" />
             </Link>
           </TooltipTrigger>
           <TooltipContent>
