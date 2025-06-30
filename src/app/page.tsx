@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://picsum.photos/seed/ecom/600/400',
+    image: 'https://picsum.photos/seed/commerce/600/400',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
