@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase } from 'lucide-react';
+import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectCard } from '@/components/project-card';
@@ -111,6 +111,7 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
+        <ServicesSection />
         <SkillsSection />
         <ProjectsSection />
       </main>
@@ -140,6 +141,7 @@ function Header() {
         </Link>
         <nav className="flex items-center space-x-6 text-sm font-medium">
           <Link href="#about" className="transition-colors hover:text-primary">About</Link>
+          <Link href="#services" className="transition-colors hover:text-primary">Services</Link>
           <Link href="#skills" className="transition-colors hover:text-primary">Skills</Link>
           <Link href="#projects" className="transition-colors hover:text-primary">Projects</Link>
           <Link href="#contact" className="transition-colors hover:text-primary">Contact</Link>
@@ -239,6 +241,50 @@ function AboutSection() {
             </div>
         </section>
     );
+}
+
+function ServicesSection() {
+  return (
+    <section id="services" className="py-20 md:py-32 bg-card/20">
+      <div className="container mx-auto max-w-7xl px-4">
+        <div className="text-center mb-16">
+          <h2 className="font-headline text-4xl font-bold tracking-tight">
+            My <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Services</span>
+          </h2>
+          <p className="mt-2 text-lg text-muted-foreground">What I can do for you.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="p-4 bg-primary/10 rounded-full mb-4">
+              <LayoutTemplate className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Frontend Development</h3>
+            <p className="text-muted-foreground">
+              Crafting beautiful and responsive user interfaces with modern technologies like React, Next.js, and Tailwind CSS.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="p-4 bg-primary/10 rounded-full mb-4">
+              <ServerCog className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Backend Development</h3>
+            <p className="text-muted-foreground">
+              Building robust, scalable server-side logic and APIs using Node.js, Express, and databases like MongoDB and Firebase.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="p-4 bg-primary/10 rounded-full mb-4">
+              <Rocket className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Full-Stack Solutions</h3>
+            <p className="text-muted-foreground">
+              Providing end-to-end development services, from concept and design to deployment and maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function ProjectsSection() {
