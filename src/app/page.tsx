@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://picsum.photos/seed/ecommerce/600/400',
+    image: 'https://picsum.photos/seed/e-commerce-platform/600/400',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
@@ -141,7 +141,9 @@ function HeroSection() {
       <DeveloperAnimation />
       <div className="flex flex-col gap-2">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
-          Hi, I'm Prince Kumar
+          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">
+            Hi, I'm Prince Kumar
+          </span>
         </h1>
         <p className="max-w-2xl text-lg text-muted-foreground">
           I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.
