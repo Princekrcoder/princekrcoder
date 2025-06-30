@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce website with product listings, shopping cart, and payment integration.',
-    image: 'https://picsum.photos/seed/ecommerce/600/400',
+    image: 'https://picsum.photos/seed/ecommerce-website/600/400',
     tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     live: '#',
@@ -117,9 +117,9 @@ export default function Home() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button asChild className="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full shadow-lg transition-transform hover:scale-110" size="icon">
+            <Button asChild className="fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full border border-primary/20 bg-background/50 p-0 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-110 hover:border-primary/40 hover:bg-background/70" >
               <Link href="#contact" aria-label="Get in touch">
-                <MessageSquare className="h-8 w-8" />
+                <MessageSquare className="h-6 w-6" />
               </Link>
             </Button>
           </TooltipTrigger>
