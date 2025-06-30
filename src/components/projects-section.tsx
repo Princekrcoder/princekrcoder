@@ -192,7 +192,7 @@ export function ProjectsSection() {
           <p className="mt-2 text-lg text-muted-foreground">Here are some of the projects I've worked on.</p>
         </div>
       </div>
-      <div ref={containerRef} className="relative" style={{ height: `${projects.length * 100}vh` }}>
+      <div ref={containerRef} className="relative" style={{ height: `${projects.length * 50}vh` }}>
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
             {projects.map((project, index) => {
               const targetScale = 1 - ((projects.length - index) * 0.05);

@@ -33,12 +33,12 @@ export function ProjectCard({ project, index, progress, range, targetScale }: Pr
       style={{
         scale,
         opacity,
-        top: `calc(1rem + 2rem * ${index})`,
+        top: `calc(2rem + ${index * 2}rem)`,
         zIndex: index,
       }}
       className="absolute flex h-[80vh] w-full items-center justify-center p-4"
     >
-      <div className="bg-slate-900 border border-slate-700/50 rounded-2xl text-card-foreground shadow-2xl shadow-black/30 overflow-hidden h-full w-full max-w-7xl">
+      <div className="bg-slate-900/95 backdrop-blur-sm border border-slate-700/50 rounded-2xl text-card-foreground shadow-2xl shadow-black/30 overflow-hidden h-full w-full max-w-7xl">
           <div className="grid md:grid-cols-2 items-center h-full">
             <div className="p-8 md:p-12 order-2 md:order-1 flex flex-col justify-center h-full">
               <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
