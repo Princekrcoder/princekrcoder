@@ -21,8 +21,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ i, title, company, year, achievements, live, progress, range, targetScale, projectsLength }: ProjectCardProps) {
-    const scale = useTransform(progress, range, [1, targetScale]);
     const y = useTransform(progress, range, [0, -100 * (projectsLength - i)]);
+    const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
         <motion.div
@@ -30,9 +30,8 @@ export function ProjectCard({ i, title, company, year, achievements, live, progr
                 scale,
                 y,
                 zIndex: projectsLength - i,
-                top: `${i * 30}px`,
             }}
-            className="group absolute w-full max-w-3xl will-change-transform transform-style-3d"
+            className="group absolute top-0 w-full max-w-3xl will-change-transform transform-style-3d"
         >
             <div className="rounded-2xl bg-card/30 backdrop-blur-lg text-card-foreground shadow-2xl shadow-black/40 overflow-hidden p-8 h-full flex flex-col">
                 <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-20 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
