@@ -80,14 +80,10 @@ export function ProjectsSection() {
                     </p>
                 </div>
             </div>
-            <div className="container mx-auto max-w-3xl px-4">
-              <div className="flex flex-col">
-                {projects.map((project, i) => (
-                    <div key={i} className="h-[40rem]">
-                        <ProjectCard i={i} {...project} />
-                    </div>
-                ))}
-              </div>
+            <div className="container mx-auto max-w-3xl px-4 flex flex-col items-center gap-10 pb-[50vh]">
+              {projects.map((project, i) => (
+                  <ProjectCard i={i} {...project} key={i} />
+              ))}
             </div>
         </section>
     );

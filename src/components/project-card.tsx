@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 interface ProjectCardProps {
     i: number;
@@ -21,9 +21,12 @@ export function ProjectCard({ i, title, company, year, achievements, live }: Pro
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-            style={{ top: `calc(5rem + ${i * 2}rem)`, zIndex: i }}
-            className="group sticky w-full"
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            style={{
+                top: `calc(5rem + ${i * 2}rem)`, // Each card sticks 2rem lower than the last
+                zIndex: i + 1, // Ensure cards stack correctly
+            }}
+            className="group sticky w-full max-w-3xl"
         >
             <div className="rounded-2xl bg-card/30 backdrop-blur-lg text-card-foreground shadow-2xl shadow-black/40 overflow-hidden p-8 h-[30rem] flex flex-col">
                 <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-20 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
