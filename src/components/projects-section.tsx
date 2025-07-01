@@ -2,6 +2,9 @@
 
 import React from 'react';
 import { ProjectCard } from './project-card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { Github } from 'lucide-react';
 
 const projects = [
   {
@@ -84,6 +87,14 @@ export function ProjectsSection() {
               {projects.map((project, i) => (
                   <ProjectCard i={i} {...project} key={i} />
               ))}
+            </div>
+            <div className="container mx-auto flex justify-center -mt-48">
+              <Button asChild size="lg">
+                <Link href="https://github.com/Princekrcoder?tab=repositories" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  View More Projects
+                </Link>
+              </Button>
             </div>
         </section>
     );
