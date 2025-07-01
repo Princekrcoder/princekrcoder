@@ -83,7 +83,9 @@ export function ProjectsSection() {
             <div className="container mx-auto max-w-3xl px-4">
               <div className="flex flex-col">
                 {projects.map((project, i) => (
-                    <ProjectCard key={`p_${i}`} i={i} {...project} />
+                    <div key={i} className="h-48">
+                        <ProjectCard i={i} {...project} />
+                    </div>
                 ))}
               </div>
             </div>
