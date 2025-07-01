@@ -89,12 +89,11 @@ export function ProjectsSection() {
                 </div>
             </div>
             <div ref={container} className="relative h-[250vh] -mt-20">
-                <div className="sticky top-20 md:top-32 h-screen flex flex-col items-center">
+                <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
                     {projects.map((project, i) => {
-                        const reversedIndex = projects.length - 1 - i;
-                        const targetScale = 1 - (i * 0.05);
-                        const range: [number, number] = [reversedIndex * 0.15, 1];
-                        return <ProjectCard key={`p_${i}`} i={reversedIndex} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
+                        const targetScale = 1 - ((projects.length - 1 - i) * 0.05);
+                        const range: [number, number] = [i * 0.15, 1];
+                        return <ProjectCard key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
                     })}
                 </div>
             </div>
