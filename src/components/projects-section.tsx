@@ -42,6 +42,18 @@ const projects = [
     live: '#',
     category: 'devops',
   },
+    {
+    title: 'Customer Churn Prediction',
+    company: 'Insight AI',
+    year: '2023',
+    achievements: [
+      'Developed a machine learning model to predict customer churn with 92% accuracy.',
+      'Used scikit-learn for model training and evaluation.',
+      'Created an API with Flask to serve predictions in real-time.',
+    ],
+    live: '#',
+    category: 'ai-ml',
+  },
   {
     title: 'Personal Portfolio Website',
     company: 'Freelance',
@@ -53,18 +65,6 @@ const projects = [
     ],
     live: '#',
     category: 'web-development',
-  },
-  {
-    title: 'Customer Churn Prediction',
-    company: 'Insight AI',
-    year: '2023',
-    achievements: [
-      'Developed a machine learning model to predict customer churn with 92% accuracy.',
-      'Used scikit-learn for model training and evaluation.',
-      'Created an API with Flask to serve predictions in real-time.',
-    ],
-    live: '#',
-    category: 'ai-ml',
   },
 ];
 

@@ -35,7 +35,7 @@ export function ProjectCard({ i, title, company, year, achievements, live, progr
             className="group absolute w-full max-w-3xl will-change-transform transform-style-3d"
         >
             <div className="rounded-2xl bg-card/30 backdrop-blur-lg text-card-foreground shadow-2xl shadow-black/40 overflow-hidden p-8 h-full flex flex-col">
-                <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
+                <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-20 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
                 <div className="absolute inset-0 rounded-2xl border border-primary/20 transition-colors group-hover:border-primary/40" />
                 <div className="relative z-10 flex flex-col flex-grow">
                     <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
