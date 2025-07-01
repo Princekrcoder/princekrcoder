@@ -1,8 +1,7 @@
 
 'use client';
 
-import React, { useRef } from 'react';
-import { useScroll } from 'framer-motion';
+import React from 'react';
 import { ProjectCard } from './project-card';
 
 const projects = [
@@ -70,12 +69,6 @@ const projects = [
 
 
 export function ProjectsSection() {
-    const container = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ['start start', 'end end']
-    });
-
     return (
         <section id="projects" className="py-20 md:py-32">
              <div className="container mx-auto max-w-7xl px-4">
@@ -88,14 +81,12 @@ export function ProjectsSection() {
                     </p>
                 </div>
             </div>
-            <div ref={container} className="relative h-[250vh] -mt-20">
-                <div className="sticky top-0 h-screen flex flex-col items-center justify-start pt-24">
-                    {projects.map((project, i) => {
-                        const targetScale = 1 - ((projects.length - 1 - i) * 0.05);
-                        const range: [number, number] = [i * 0.15, 1];
-                        return <ProjectCard key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
-                    })}
-                </div>
+            <div className="container mx-auto max-w-3xl px-4">
+              <div className="flex flex-col">
+                {projects.map((project, i) => (
+                    <ProjectCard key={`p_${i}`} i={i} {...project} />
+                ))}
+              </div>
             </div>
         </section>
     );
