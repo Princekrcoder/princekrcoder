@@ -228,12 +228,6 @@ function Footer() {
             <p className="text-muted-foreground mt-1 max-w-sm">
                 I'm always open to discussing new projects or opportunities. Feel free to reach out.
             </p>
-             <div className="flex items-center gap-2 mt-4">
-                <Mail className="h-5 w-5 text-muted-foreground" />
-                <a href="mailto:princekr2840@gmail.com" className="font-medium hover:text-primary transition-colors">
-                    princekr2840@gmail.com
-                </a>
-            </div>
         </div>
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" asChild>
@@ -249,6 +243,11 @@ function Footer() {
            <Button variant="ghost" size="icon" asChild>
             <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Discord">
               <DiscordIcon className="h-6 w-6" />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="mailto:princekr2840@gmail.com" aria-label="Email">
+              <Mail className="h-6 w-6" />
             </Link>
           </Button>
         </div>
