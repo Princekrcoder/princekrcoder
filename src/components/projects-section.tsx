@@ -83,7 +83,7 @@ export function ProjectsSection() {
             <div className="container mx-auto max-w-3xl px-4">
               <div className="flex flex-col">
                 {projects.map((project, i) => (
-                    <div key={i} className="h-48">
+                    <div key={i} className="h-[35rem]">
                         <ProjectCard i={i} {...project} />
                     </div>
                 ))}
