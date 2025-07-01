@@ -18,20 +18,22 @@ interface ProjectCardProps {
 
 export function ProjectCard({ i, title, company, year, achievements, live }: ProjectCardProps) {
     const containerRef = useRef<HTMLDivElement>(null);
+    
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "end start"]
+        offset: ["start end", "start 0.8"]
     });
 
-    const scale = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0.9, 1, 1, 0.9]);
-    const topPosition = `calc(8rem + ${i * 4}rem)`;
+    const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+    const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
     return (
-        <div ref={containerRef} className="h-[40rem]">
+        <div ref={containerRef} className="h-auto mb-20 last:mb-0">
             <motion.div
                 style={{
-                    scale: scale,
-                    top: topPosition,
+                    scale,
+                    opacity,
+                    top: `calc(5rem + ${i * 2}rem)`,
                     zIndex: i,
                 }}
                 className="group sticky"
