@@ -89,7 +89,7 @@ export function ProjectsSection() {
                 </div>
             </div>
             <div ref={container} className="relative h-[250vh] -mt-20">
-                <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
+                <div className="sticky top-0 h-screen flex flex-col items-center justify-start pt-24">
                     {projects.map((project, i) => {
                         const targetScale = 1 - ((projects.length - 1 - i) * 0.05);
                         const range: [number, number] = [i * 0.15, 1];

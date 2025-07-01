@@ -30,7 +30,7 @@ export function ProjectCard({ i, title, company, year, achievements, live, progr
                 scale,
                 y,
                 zIndex: projectsLength - i,
-                top: `${i * 2.5}rem`
+                top: `${i * 4}rem` // Increased spacing
             }}
             className="group absolute w-full max-w-3xl will-change-transform transform-style-3d"
         >
