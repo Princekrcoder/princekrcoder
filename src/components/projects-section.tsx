@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { useScroll } from 'framer-motion';
 import { ProjectCard } from './project-card';
-import { Button } from '@/components/ui/button';
 
 const projects = [
   {
@@ -14,6 +13,18 @@ const projects = [
       'Boosted conversion rates by 15% with a streamlined checkout process.',
       'Reduced page load times by 40% through server-side rendering with Next.js.',
       'Ensured 99.9% uptime by deploying on a scalable Vercel architecture.',
+    ],
+    live: '#',
+    category: 'web-development',
+  },
+  {
+    title: 'Content-Rich Blog Platform',
+    company: 'NextGen Media',
+    year: '2023',
+    achievements: [
+        'Built a dynamic blogging platform with Next.js and a headless CMS.',
+        'Implemented server-side rendering (SSR) for optimal SEO performance.',
+        'Designed a modular architecture for easy content updates.',
     ],
     live: '#',
     category: 'web-development',
@@ -31,6 +42,18 @@ const projects = [
     category: 'devops',
   },
   {
+    title: 'Personal Portfolio Website',
+    company: 'Freelance',
+    year: '2024',
+    achievements: [
+        'Designed and developed a personal portfolio with Next.js and Tailwind CSS.',
+        'Integrated a fully functional contact form using Nodemailer.',
+        'Deployed on Vercel with a CI/CD pipeline for seamless updates.',
+    ],
+    live: '#',
+    category: 'web-development',
+  },
+  {
     title: 'Customer Churn Prediction',
     company: 'Insight AI',
     year: '2023',
@@ -42,88 +65,36 @@ const projects = [
     live: '#',
     category: 'ai-ml',
   },
-  {
-    title: 'Open Source Contribution',
-    company: 'Community Project',
-    year: '2024',
-    achievements: [
-      'Contributed features and bug fixes to a popular open-source library.',
-      'Improved documentation, making it more accessible to new users.',
-      'Collaborated with a global team of developers to enhance project quality.',
-    ],
-    live: '#',
-    category: 'others',
-  },
-  {
-    title: 'Another Web Project',
-    company: 'Web Wizards',
-    year: '2024',
-    achievements: [
-      'Built a highly interactive single-page application using React and Redux.',
-      'Integrated with various third-party APIs for extended functionality.',
-      'Achieved a Lighthouse performance score of 95+.',
-    ],
-    live: '#',
-    category: 'web-development',
-  },
 ];
 
-const categories = ['all', 'web-development', 'devops', 'ai-ml', 'others'];
-
 export function ProjectsSection() {
-  const [filter, setFilter] = useState('all');
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start start', 'end end']
+    });
 
-  const filteredProjects = useMemo(() => {
-    if (filter === 'all') {
-      return projects;
-    }
-    return projects.filter((project) => project.category === filter);
-  }, [filter]);
-
-  return (
-    <section id="projects" className="py-20 md:py-32">
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="mb-16 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground">
-            Featured Projects
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            See how I transformed concepts into engaging digital experiences.
-          </p>
-        </div>
-
-        <div className="flex justify-center items-center gap-2 md:gap-4 mb-12 flex-wrap">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={filter === category ? 'default' : 'ghost'}
-              onClick={() => setFilter(category)}
-              className="capitalize rounded-full px-6 transition-all duration-300"
-            >
-              {category.replace('-', ' ')}
-            </Button>
-          ))}
-        </div>
-
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
-          {filteredProjects.map((project) => (
-            <motion.div
-              key={project.title}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="h-full"
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
+    return (
+        <section id="projects" className="py-20 md:py-32">
+             <div className="container mx-auto max-w-7xl px-4">
+                <div className="mb-16 text-center">
+                    <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground">
+                        Featured Projects
+                    </h2>
+                    <p className="mt-4 text-lg text-muted-foreground">
+                        See how I transformed concepts into engaging digital experiences.
+                    </p>
+                </div>
+            </div>
+            <div ref={container} className="relative h-[250vh] -mt-20">
+                <div className="sticky top-20 md:top-32 h-screen flex flex-col items-center">
+                    {projects.map((project, i) => {
+                        const targetScale = 1 - ((projects.length - i) * 0.05);
+                        const range: [number, number] = [i * 0.15, 1];
+                        return <ProjectCard key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
+                    })}
+                </div>
+            </div>
+        </section>
+    );
 }
