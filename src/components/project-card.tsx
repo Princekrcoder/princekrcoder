@@ -22,7 +22,7 @@ export function ProjectCard({ i, title, company, year, achievements, live }: Pro
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            style={{ top: `calc(5rem + ${i * 3}rem)`, zIndex: i }}
+            style={{ top: `calc(5rem + ${i * 2}rem)`, zIndex: i }}
             className="group sticky w-full"
         >
             <div className="rounded-2xl bg-card/30 backdrop-blur-lg text-card-foreground shadow-2xl shadow-black/40 overflow-hidden p-8 h-[30rem] flex flex-col">
