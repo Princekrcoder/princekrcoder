@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { SpaceAnimation } from '@/components/space-animation';
 
 export const metadata: Metadata = {
-  title: 'Princefolio | Prince Kumar',
+  title: 'Prince Kumar | Developer & DSA Enthusiast',
   description: "Prince Kumar's personal portfolio. A full stack developer and problem solver.",
 };
 
