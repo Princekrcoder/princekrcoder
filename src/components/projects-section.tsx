@@ -7,66 +7,67 @@ import { ProjectCard } from './project-card';
 
 const projects = [
   {
-    title: 'E-commerce Platform',
+    title: 'NexusPay - Global E-commerce Platform',
     company: 'Retail Co.',
     year: '2023',
     achievements: [
-      'Boosted conversion rates by 15% with a streamlined checkout process.',
-      'Reduced page load times by 40% through server-side rendering with Next.js.',
-      'Ensured 99.9% uptime by deploying on a scalable Vercel architecture.',
+      'Led frontend development for a redesign, boosting page load speed by 40% and conversion rates by 15%.',
+      'Architected a scalable state management solution using Redux Toolkit for complex user session and cart logic.',
+      'Integrated Stripe API for secure, multi-currency payment processing across 50+ countries.',
     ],
-    live: '#',
+    live: 'https://github.com/Princekrcoder',
     category: 'web-development',
   },
   {
-    title: 'Content-Rich Blog Platform',
+    title: 'InsightHub - Dynamic Blogging & CMS',
     company: 'NextGen Media',
     year: '2023',
     achievements: [
-        'Built a dynamic blogging platform with Next.js and a headless CMS.',
-        'Implemented server-side rendering (SSR) for optimal SEO performance.',
-        'Designed a modular architecture for easy content updates.',
+        'Built a high-performance, SEO-optimized blog platform with Next.js and a headless CMS (Sanity).',
+        'Implemented Incremental Static Regeneration (ISR) to deliver fast page loads with dynamic content.',
+        'Designed a custom rich text editor with collaborative features, improving the content creation workflow.',
     ],
-    live: '#',
+    live: 'https://github.com/Princekrcoder',
     category: 'web-development',
   },
-  {
-    title: 'CI/CD Pipeline Automation',
+    {
+    title: 'QuantumLeap - CI/CD & Cloud Infrastructure',
     company: 'DevOps Solutions',
     year: '2022',
     achievements: [
-      'Automated deployment pipelines, reducing release times by 60%.',
-      'Implemented containerization with Docker for consistent environments.',
-      'Set up comprehensive monitoring with Prometheus and Grafana.',
+      'Automated build, test, and deployment pipelines with GitHub Actions, cutting manual deployment time by 90%.',
+      'Provisioned and managed scalable cloud infrastructure on AWS using Terraform, ensuring 99.9% uptime.',
+      'Implemented a containerization strategy with Docker and Kubernetes to streamline development.',
     ],
-    live: '#',
+    live: 'https://github.com/Princekrcoder',
     category: 'devops',
   },
-    {
-    title: 'Customer Churn Prediction',
-    company: 'Insight AI',
-    year: '2023',
+  {
+    title: 'Aura - AI-Powered Code Assistant',
+    company: 'DevTools Inc.',
+    year: '2024',
     achievements: [
-      'Developed a machine learning model to predict customer churn with 92% accuracy.',
-      'Used scikit-learn for model training and evaluation.',
-      'Created an API with Flask to serve predictions in real-time.',
+      'Engineered a real-time code completion engine using a fine-tuned LLM, increasing developer productivity by 25%.',
+      'Built a scalable WebSocket architecture for low-latency suggestions directly in VS Code.',
+      'Designed a secure authentication system with NextAuth.js to protect user data and codebase access.',
     ],
-    live: '#',
+    live: 'https://github.com/Princekrcoder',
     category: 'ai-ml',
   },
   {
-    title: 'Personal Portfolio Website',
-    company: 'Freelance',
-    year: '2024',
+    title: 'AlgoVisualizer - DSA Learning Tool',
+    company: 'Open Source',
+    year: '2022',
     achievements: [
-        'Designed and developed a personal portfolio with Next.js and Tailwind CSS.',
-        'Integrated a fully functional contact form using Nodemailer.',
-        'Deployed on Vercel with a CI/CD pipeline for seamless updates.',
+        'Created an interactive educational tool to visualize complex algorithms like pathfinding and sorting.',
+        'Engineered with React for a dynamic UI and C++ for core logic, compiled to WebAssembly for performance.',
+        'Attracted over 10,000 users in its first month and grew a community of open-source contributors.',
     ],
-    live: '#',
-    category: 'web-development',
+    live: 'https://github.com/Princekrcoder',
+    category: 'others',
   },
 ];
+
 
 export function ProjectsSection() {
     const container = useRef(null);
@@ -89,10 +90,11 @@ export function ProjectsSection() {
             </div>
             <div ref={container} className="relative h-[250vh] -mt-20">
                 <div className="sticky top-20 md:top-32 h-screen flex flex-col items-center">
-                    {[...projects].reverse().map((project, i) => {
-                        const targetScale = 1 - ((projects.length - i) * 0.05);
-                        const range: [number, number] = [i * 0.15, 1];
-                        return <ProjectCard key={`p_${projects.length - 1 - i}`} i={i} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
+                    {projects.map((project, i) => {
+                        const reversedIndex = projects.length - 1 - i;
+                        const targetScale = 1 - (i * 0.05);
+                        const range: [number, number] = [reversedIndex * 0.15, 1];
+                        return <ProjectCard key={`p_${i}`} i={reversedIndex} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
                     })}
                 </div>
             </div>
