@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useRef } from 'react';
@@ -88,10 +89,10 @@ export function ProjectsSection() {
             </div>
             <div ref={container} className="relative h-[250vh] -mt-20">
                 <div className="sticky top-20 md:top-32 h-screen flex flex-col items-center">
-                    {projects.map((project, i) => {
+                    {[...projects].reverse().map((project, i) => {
                         const targetScale = 1 - ((projects.length - i) * 0.05);
                         const range: [number, number] = [i * 0.15, 1];
-                        return <ProjectCard key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
+                        return <ProjectCard key={`p_${projects.length - 1 - i}`} i={i} {...project} progress={scrollYProgress} range={range} targetScale={targetScale} projectsLength={projects.length} />;
                     })}
                 </div>
             </div>
