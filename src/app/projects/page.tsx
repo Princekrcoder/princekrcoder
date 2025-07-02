@@ -78,7 +78,7 @@ export default function ProjectsPage() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3 }}
-                            className="h-full"
+                            className="h-full [perspective:1200px]"
                         >
                             <StaticProjectCard {...project} />
                         </motion.div>

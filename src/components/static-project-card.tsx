@@ -1,4 +1,7 @@
 
+'use client';
+
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,8 +15,39 @@ interface StaticProjectCardProps {
 }
 
 export function StaticProjectCard({ title, achievements, live }: StaticProjectCardProps) {
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const card = cardRef.current;
+        if (!card) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = -(y - centerY) / 10;
+        const rotateY = (x - centerX) / 10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    };
+
+    const handleMouseLeave = () => {
+        const card = cardRef.current;
+        if (card) {
+            card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+        }
+    };
+
     return (
-        <Card className="flex flex-col h-full bg-card/50 border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+        <Card 
+            ref={cardRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="flex flex-col h-full bg-card/50 border-border/10 shadow-lg hover:shadow-primary/20 transition-transform duration-200 transform-style-3d will-change-transform"
+        >
             <CardHeader>
                 <CardTitle>{title}</CardTitle>
             </CardHeader>
