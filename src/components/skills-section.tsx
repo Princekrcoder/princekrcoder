@@ -79,7 +79,7 @@ export function SkillsSection() {
               transition={{ duration: 0.3 }}
               className="h-full"
             >
-              <div className="h-full rounded-lg p-px bg-border/10 hover:bg-gradient-to-r from-accent/60 to-primary/60 transition-all duration-300 cursor-pointer">
+              <div className="h-full rounded-lg p-px bg-border/10 transition-all duration-300 cursor-pointer">
                 <div className="bg-card/50 p-6 rounded-lg h-full">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-semibold text-lg text-foreground">{skill.name}</h3>
