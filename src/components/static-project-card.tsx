@@ -62,7 +62,7 @@ export function StaticProjectCard({ title, achievements, live }: StaticProjectCa
                 </ul>
             </CardContent>
             <CardFooter>
-                 <Button asChild variant="outline" className="bg-transparent border-muted-foreground/50 hover:bg-card/60 hover:text-foreground mt-auto w-full">
+                 <Button asChild variant="outline" className="bg-transparent border-muted-foreground/50 hover:bg-primary hover:text-primary-foreground mt-auto w-full transition-colors">
                     <Link href={live} target="_blank" rel="noopener noreferrer">
                         Visit Live Site
                         <ArrowUpRight className="h-4 w-4 ml-2" />
