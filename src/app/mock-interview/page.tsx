@@ -11,19 +11,19 @@ const tiers = [
     {
         name: 'Beginner',
         price: '₹399',
-        description: 'For students with basic knowledge (development , basic DSA, fresher-level CS questions).',
+        description: 'Perfect for students and freshers. This session focuses on core CS fundamentals, basic data structures, algorithms, and typical entry-level developer questions.',
         mailto: 'mailto:princekr2840@gmail.com?subject=Beginner%20Mock%20Interview%20Booking'
     },
     {
         name: 'Intermediate',
         price: '₹799',
-        description: 'For those who have 6–18 months experience or decent DSA + basic system design knowledge.',
+        description: 'Designed for developers with 6-18 months of experience. We will tackle intermediate DSA problems and introduce basic system design principles.',
         mailto: 'mailto:princekr2840@gmail.com?subject=Intermediate%20Mock%20Interview%20Booking'
     },
     {
         name: 'Advanced',
         price: '₹1499',
-        description: 'For candidates preparing for top MNCs like Google, Amazon, Atlassian, or with 2+ years experience.',
+        description: 'For experienced candidates preparing for senior roles at top MNCs. This session dives deep into advanced algorithms and complex system design scenarios.',
         mailto: 'mailto:princekr2840@gmail.com?subject=Advanced%20Mock%20Interview%20Booking'
     }
 ]
