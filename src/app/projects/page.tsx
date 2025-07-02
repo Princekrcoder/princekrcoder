@@ -1,4 +1,7 @@
 
+'use client';
+
+import React, { useState, useMemo } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { projects } from '@/lib/projects';
@@ -6,8 +9,29 @@ import { StaticProjectCard } from '@/components/static-project-card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const categories = ['all', 'web-development', 'devops', 'blockchain', 'ai/ml', 'others'];
+const categoryDisplayNames: { [key: string]: string } = {
+    'all': 'All',
+    'web-development': 'Web Development',
+    'devops': 'DevOps',
+    'blockchain': 'Blockchain',
+    'ai/ml': 'AI / ML',
+    'others': 'Others'
+};
+
 
 export default function ProjectsPage() {
+    const [filter, setFilter] = useState('all');
+
+    const filteredProjects = useMemo(() => {
+        if (filter === 'all') {
+            return projects;
+        }
+        return projects.filter((project) => project.category === filter);
+    }, [filter]);
+
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
@@ -29,11 +53,43 @@ export default function ProjectsPage() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <StaticProjectCard key={index} {...project} />
+                <div className="flex justify-center items-center gap-2 md:gap-4 mb-12 flex-wrap">
+                    {categories.map((category) => (
+                        <Button
+                            key={category}
+                            variant={filter === category ? 'default' : 'ghost'}
+                            onClick={() => setFilter(category)}
+                            className="capitalize rounded-full px-6 transition-all duration-300"
+                        >
+                            {categoryDisplayNames[category]}
+                        </Button>
                     ))}
                 </div>
+
+                <motion.div
+                    layout
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    {filteredProjects.map((project) => (
+                        <motion.div
+                            key={project.title}
+                            layout
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                            className="h-full"
+                        >
+                            <StaticProjectCard {...project} />
+                        </motion.div>
+                    ))}
+                </motion.div>
+                
+                {filteredProjects.length === 0 && (
+                    <div className="text-center text-muted-foreground py-16">
+                        <p className="text-lg">No projects in this category yet. Stay tuned!</p>
+                    </div>
+                )}
             </main>
             <Footer />
         </div>

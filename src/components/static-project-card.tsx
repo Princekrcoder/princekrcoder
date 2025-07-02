@@ -8,6 +8,7 @@ interface StaticProjectCardProps {
     title: string;
     achievements: string[];
     live: string;
+    category?: string;
 }
 
 export function StaticProjectCard({ title, achievements, live }: StaticProjectCardProps) {
