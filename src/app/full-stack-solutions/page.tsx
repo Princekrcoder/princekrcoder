@@ -1,3 +1,4 @@
+'use client';
 
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -6,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowLeft, CheckCircle2, Code, Database, Rocket, Palette, Zap, User, Users, CreditCard, Package, TrendingUp, ShoppingCart, BookOpen, Award, FileText, Search, MessageSquare, Feather, Video, Gamepad2, MessagesSquare } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
+import { motion } from 'framer-motion';
 
 const offerings = [
     {
@@ -121,6 +123,14 @@ const elearningBenefits = [
     },
 ];
 
+const sectionVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+        opacity: 1, 
+        y: 0, 
+        transition: { duration: 0.6, ease: "easeOut" } 
+    }
+};
 
 export default function FullStackSolutionsPage() {
     return (
@@ -138,15 +148,32 @@ export default function FullStackSolutionsPage() {
 
                 <Card className="bg-card/50 border-border/10 shadow-lg">
                     <CardHeader className="text-center p-8">
-                        <h1 className="font-headline text-4xl font-bold tracking-tight">
+                        <motion.h1 
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            variants={sectionVariants}
+                            className="font-headline text-4xl font-bold tracking-tight">
                             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Full-Stack Development</span> Solutions
-                        </h1>
-                        <CardDescription className="text-lg pt-2 max-w-3xl mx-auto">
-                            From concept to code, I build comprehensive, high-performance web applications that deliver tangible results and drive business growth.
-                        </CardDescription>
+                        </motion.h1>
+                        <motion.div
+                             initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            variants={{ ...sectionVariants, visible: { ...sectionVariants.visible, transition: { ...sectionVariants.visible.transition, delay: 0.2 } } }}
+                        >
+                            <CardDescription className="text-lg pt-2 max-w-3xl mx-auto">
+                                From concept to code, I build comprehensive, high-performance web applications that deliver tangible results and drive business growth.
+                            </CardDescription>
+                        </motion.div>
                     </CardHeader>
                      <CardContent className="p-8">
-                        <div className="mb-16">
+                        <motion.div 
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={sectionVariants}
+                            className="mb-16">
                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                 What I <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Offer</span>
                             </h2>
@@ -158,11 +185,16 @@ export default function FullStackSolutionsPage() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                         
                         <Separator className="my-16 bg-border/20" />
 
-                        <div>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={sectionVariants}
+                        >
                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Technology Stack</span>
                             </h2>
@@ -204,10 +236,16 @@ export default function FullStackSolutionsPage() {
                                     </CardContent>
                                 </Card>
                             </div>
-                        </div>
+                        </motion.div>
                         
                         <Separator className="my-16 bg-border/20" />
 
+                        <motion.div
+                             initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            variants={sectionVariants}
+                        >
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                             <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
@@ -237,9 +275,16 @@ export default function FullStackSolutionsPage() {
                                 </div>
                             </CardContent>
                         </Card>
+                        </motion.div>
 
                         <Separator className="my-16 bg-border/20" />
-
+                        
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            variants={sectionVariants}
+                        >
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
@@ -269,9 +314,16 @@ export default function FullStackSolutionsPage() {
                                 </div>
                              </CardContent>
                         </Card>
+                        </motion.div>
 
                         <Separator className="my-16 bg-border/20" />
-
+                        
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            variants={sectionVariants}
+                        >
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
@@ -301,9 +353,16 @@ export default function FullStackSolutionsPage() {
                                 </div>
                              </CardContent>
                         </Card>
+                        </motion.div>
                         
                         <Separator className="my-16 bg-border/20" />
                         
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            variants={sectionVariants}
+                        >
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
@@ -333,9 +392,16 @@ export default function FullStackSolutionsPage() {
                                 </div>
                              </CardContent>
                         </Card>
+                        </motion.div>
 
                         <Separator className="my-16 bg-border/20" />
-
+                        
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            variants={sectionVariants}
+                        >
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
@@ -365,8 +431,14 @@ export default function FullStackSolutionsPage() {
                                 </div>
                              </CardContent>
                         </Card>
+                        </motion.div>
 
-                         <div className="text-center mt-16">
+                         <motion.div 
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            variants={sectionVariants}
+                            className="text-center mt-16">
                             <h3 className="text-2xl font-bold mb-4">Ready to build something <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">amazing?</span></h3>
                             <p className="text-muted-foreground max-w-xl mx-auto mb-6">Let's discuss your project and how I can help bring your vision to life.</p>
                             <Button size="lg" asChild>
@@ -375,7 +447,7 @@ export default function FullStackSolutionsPage() {
                                     Discuss Your Project
                                 </Link>
                             </Button>
-                        </div>
+                        </motion.div>
                     </CardContent>
                 </Card>
             </main>
