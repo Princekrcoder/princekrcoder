@@ -9,8 +9,6 @@ import { Github } from 'lucide-react';
 const projects = [
   {
     title: 'LearnSphere - Online Learning Management System',
-    company: 'Ed-Tech Project',
-    year: '2023',
     achievements: [
       'Developed a full-featured LMS with Next.js, enabling course creation, student enrollment, and progress tracking.',
       'Built a secure MERN stack backend with user authentication and role-based access control (students, instructors).',
@@ -21,8 +19,6 @@ const projects = [
   },
   {
     title: 'NexusAdmin - Comprehensive Admin Dashboard',
-    company: 'Internal Tool',
-    year: '2023',
     achievements: [
         'Architected a powerful admin panel for data visualization and content management using Next.js.',
         'Implemented secure RESTful APIs on a Node.js/Express backend to manage users, products, and site analytics.',
@@ -33,8 +29,6 @@ const projects = [
   },
     {
     title: 'TaskFlow - Collaborative Project Management Tool',
-    company: 'Productivity App',
-    year: '2022',
     achievements: [
       'Created a Kanban-style project management tool with drag-and-drop functionality using React and Next.js.',
       'Developed real-time collaboration features with a MERN stack backend for assignments and comments.',
@@ -45,8 +39,6 @@ const projects = [
   },
   {
     title: 'ShopWise - Modern E-commerce Platform',
-    company: 'Retail Client',
-    year: '2022',
     achievements: [
       'Built a complete MERN stack e-commerce site with product catalogs, shopping cart, and secure checkout.',
       'Leveraged Next.js for server-side rendering (SSR) to enhance SEO and initial page load performance.',
@@ -57,8 +49,6 @@ const projects = [
   },
   {
     title: 'RealtyConnect - Real Estate Marketplace',
-    company: 'Prop-Tech Solution',
-    year: '2024',
     achievements: [
         'Developed a Next.js real estate app with advanced property search, filtering, and map integration.',
         'Engineered a robust MERN stack backend to manage property listings, user profiles, and inquiries.',

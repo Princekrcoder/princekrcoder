@@ -8,14 +8,12 @@ import { motion } from 'framer-motion';
 interface ProjectCardProps {
     i: number;
     title: string;
-    company: string;
-    year: string;
     achievements: string[];
     live: string;
     category: string;
 }
 
-export function ProjectCard({ i, title, company, year, achievements, live }: ProjectCardProps) {
+export function ProjectCard({ i, title, achievements, live }: ProjectCardProps) {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -32,9 +30,6 @@ export function ProjectCard({ i, title, company, year, achievements, live }: Pro
                 <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60 opacity-20 blur-lg transition-opacity duration-500 group-hover:opacity-70" />
                 <div className="absolute inset-0 rounded-2xl border border-primary/20 transition-colors group-hover:border-primary/40" />
                 <div className="relative z-10 flex flex-col flex-grow">
-                    <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-                        {company} &bull; {year}
-                    </p>
                     <h3 className="font-headline text-3xl font-bold text-foreground mb-6">
                         {title}
                     </h3>
