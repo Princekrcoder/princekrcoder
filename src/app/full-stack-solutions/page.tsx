@@ -3,7 +3,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, CheckCircle2, Code, Database, Rocket, Palette, Zap, User, Users, CreditCard, Package, TrendingUp, ShoppingCart, BookOpen, Award, FileText, Search, MessageSquare, Feather } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Code, Database, Rocket, Palette, Zap, User, Users, CreditCard, Package, TrendingUp, ShoppingCart, BookOpen, Award, FileText, Search, MessageSquare, Feather, Video, Gamepad2, MessagesSquare } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 
@@ -100,6 +100,24 @@ const blogBenefits = [
         icon: MessageSquare,
         title: 'Reader Engagement',
         description: 'Incorporate comments, social sharing, and subscriptions to build a loyal community around your content.',
+    },
+];
+
+const elearningBenefits = [
+    {
+        icon: Video,
+        title: 'Live & On-Demand Video',
+        description: 'Integrate video streaming for virtual classrooms, webinars, and pre-recorded lessons to engage learners.',
+    },
+    {
+        icon: MessagesSquare,
+        title: 'Community & Forums',
+        description: 'Build a space for students to connect, discuss topics, and learn from each other with integrated forums.',
+    },
+    {
+        icon: Gamepad2,
+        title: 'Gamified Learning',
+        description: 'Incorporate points, badges, and leaderboards to motivate students and make learning more interactive.',
     },
 ];
 
@@ -273,6 +291,36 @@ export default function FullStackSolutionsPage() {
                                     <Link href="/#contact">
                                         <BookOpen className="mr-2 h-5 w-5" />
                                         Build Your LMS
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+
+                        <Separator className="my-16 bg-border/20" />
+
+                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
+                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                Craft an Interactive <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-learning Platform</span>
+                            </h2>
+                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                Go beyond traditional courses. I create immersive e-learning platforms that foster community, engagement, and dynamic learning experiences.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                {elearningBenefits.map((benefit) => (
+                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                            <benefit.icon className="h-6 w-6 text-primary" />
+                                        </div>
+                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                             <div className="text-center">
+                                <Button size="lg" asChild>
+                                    <Link href="/#contact">
+                                        <Zap className="mr-2 h-5 w-5" />
+                                        Launch Your Platform
                                     </Link>
                                 </Button>
                             </div>
