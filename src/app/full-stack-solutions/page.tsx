@@ -3,7 +3,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, CheckCircle2, Code, Database, Rocket } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Code, Database, Rocket, Palette, Zap, User } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 
@@ -30,6 +30,24 @@ const technologies = {
     frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5 & CSS3'],
     backend: ['Node.js', 'Express.js', 'Firebase', 'MongoDB', 'SQL'],
 };
+
+const portfolioBenefits = [
+    {
+        icon: Palette,
+        title: 'Custom Design',
+        description: 'A unique design that reflects your personal brand and style.',
+    },
+    {
+        icon: Zap,
+        title: 'Fast & SEO-Friendly',
+        description: 'Built with Next.js for optimal performance and search engine visibility.',
+    },
+    {
+        icon: User,
+        title: 'Showcase Your Best Work',
+        description: 'Highlight your top projects and skills in a compelling way.',
+    },
+];
 
 export default function FullStackSolutionsPage() {
     return (
@@ -112,6 +130,36 @@ export default function FullStackSolutionsPage() {
                                         </ul>
                                     </CardContent>
                                 </Card>
+                            </div>
+                        </div>
+                        
+                        <Separator className="my-16 bg-border/20" />
+
+                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
+                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                Build a Standout <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Portfolio</span> with Me
+                            </h2>
+                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                A great portfolio is more than a collection of projects—it's your digital handshake. I can help you build a professional, high-performance portfolio website from scratch that showcases your skills and personality.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                {portfolioBenefits.map((benefit) => (
+                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                            <benefit.icon className="h-6 w-6 text-primary" />
+                                        </div>
+                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                             <div className="text-center">
+                                <Button size="lg" asChild>
+                                    <Link href="/#contact">
+                                        <Rocket className="mr-2 h-5 w-5" />
+                                        Let's Build Your Portfolio
+                                    </Link>
+                                </Button>
                             </div>
                         </div>
 
