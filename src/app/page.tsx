@@ -1,13 +1,14 @@
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CodeXml, Github, Linkedin, ArrowUpRight, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Mail, Handshake } from 'lucide-react';
+import { CodeXml, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Handshake, Github, Linkedin, Mail } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectsSection } from '@/components/projects-section';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { DiscordIcon } from '@/components/icons/discord-icon';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
@@ -34,25 +35,6 @@ export default function Home() {
         </Tooltip>
       </TooltipProvider>
     </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-        <Link href="/" className="font-headline text-xl font-bold text-primary">
-          Princefolio
-        </Link>
-        <nav className="flex items-center space-x-6 text-sm font-medium">
-          <Link href="#about" className="transition-colors hover:text-primary">About</Link>
-          <Link href="#services" className="transition-colors hover:text-primary">Services</Link>
-          <Link href="#skills" className="transition-colors hover:text-primary">Skills</Link>
-          <Link href="#projects" className="transition-colors hover:text-primary">Projects</Link>
-          <Link href="#contact" className="transition-colors hover:text-primary">Contact</Link>
-        </nav>
-      </div>
-    </header>
   );
 }
 
@@ -218,46 +200,3 @@ function ServicesSection() {
     </section>
   );
 }
-
-function Footer() {
-  return (
-    <footer id="contact" className="border-t py-12">
-      <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 text-center md:flex-row md:items-start">
-        <div className="flex flex-col items-center md:items-start">
-            <h3 className="font-headline text-2xl font-bold">Get in Touch</h3>
-            <p className="text-muted-foreground mt-1 max-w-sm">
-                I'm always open to discussing new projects or opportunities. Feel free to reach out.
-            </p>
-        </div>
-        <div className="flex gap-2">
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <Github className="h-6 w-6" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="https://www.linkedin.com/in/princekrcoder" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin className="h-6 w-6" />
-            </Link>
-          </Button>
-           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://discord.gg/vnD58kAN" target="_blank" rel="noopener noreferrer" aria-label="Discord">
-              <DiscordIcon className="h-6 w-6" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="mailto:princekr2840@gmail.com" aria-label="Email">
-              <Mail className="h-6 w-6" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-       <div className="container mx-auto mt-8 max-w-7xl px-4 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Prince Kumar. All Rights Reserved.
-      </div>
-    </footer>
-  );
-}
-    
-
-    
