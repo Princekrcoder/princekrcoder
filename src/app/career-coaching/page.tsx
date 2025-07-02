@@ -82,7 +82,9 @@ export default function CareerCoachingPage() {
                                 <Mail className="mr-2 h-4 w-4" /> Book Your Session
                             </Link>
                         </Button>
-                        <p className="text-sm text-muted-foreground">After booking, I'll email you to schedule a convenient time.</p>
+                        <p className="text-sm text-muted-foreground text-center max-w-md mx-auto">
+                            Clicking the button will open your default email app. After you send the email, I'll reply to schedule a convenient time.
+                        </p>
                     </CardFooter>
                 </Card>
             </main>
