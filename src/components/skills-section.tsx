@@ -77,17 +77,17 @@ export function SkillsSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="h-full"
+              className="h-full group rounded-lg transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/20"
             >
-              <div className="h-full rounded-lg p-px bg-border/10 transition-all duration-300 cursor-pointer">
-                <div className="bg-card/50 p-6 rounded-lg h-full">
+              <div className="h-full rounded-lg p-px bg-border/10 group-hover:bg-gradient-to-r from-primary to-accent transition-all duration-300">
+                <div className="bg-card p-6 rounded-lg h-full">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-semibold text-lg text-foreground">{skill.name}</h3>
                     <span className="text-primary font-mono font-semibold">{skill.level}%</span>
                   </div>
                   <div className="w-full bg-muted/50 rounded-full h-2 overflow-hidden">
                     <motion.div
-                      className="bg-gradient-to-r from-primary via-accent to-primary h-2 rounded-full"
+                      className="bg-gradient-to-r from-primary to-accent h-2 rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: `${skill.level}%` }}
                       transition={{ duration: 1, ease: "circOut" }}
