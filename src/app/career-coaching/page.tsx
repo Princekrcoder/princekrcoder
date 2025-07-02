@@ -59,23 +59,6 @@ export default function CareerCoachingPage() {
                         </CardDescription>
                     </CardHeader>
                      <CardContent className="p-8">
-                        <div className="text-center mb-12 max-w-2xl mx-auto">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight mb-4">
-                                What You'll Get
-                            </h2>
-                            <ul className="space-y-3 text-muted-foreground">
-                                {benefits.map((benefit, index) => (
-                                    <li key={index} className="flex items-start gap-3 justify-center text-left md:justify-start">
-                                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                                        <span>{benefit}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        
-                        <Separator className="my-12 bg-border/20" />
-
-
                         <div className="text-center mb-12">
                              <h2 className="font-headline text-3xl font-bold tracking-tight">
                                 Choose Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Level</span>
@@ -95,7 +78,16 @@ export default function CareerCoachingPage() {
                                             </div>
                                         </CardHeader>
                                         <CardContent className="flex-grow">
-                                            <p className="text-muted-foreground">{tier.description}</p>
+                                            <p className="text-muted-foreground mb-6">{tier.description}</p>
+                                            <Separator className="my-4 bg-border/20" />
+                                            <ul className="space-y-3 text-muted-foreground text-sm">
+                                                {benefits.map((benefit, index) => (
+                                                    <li key={index} className="flex items-start gap-3">
+                                                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                                                        <span>{benefit}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </CardContent>
                                         <CardFooter>
                                             <Button asChild className="w-full">
