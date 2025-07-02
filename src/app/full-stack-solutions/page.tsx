@@ -139,7 +139,7 @@ export default function FullStackSolutionsPage() {
                 <Card className="bg-card/50 border-border/10 shadow-lg">
                     <CardHeader className="text-center p-8">
                         <h1 className="font-headline text-4xl font-bold tracking-tight">
-                            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Full-Stack Development</span> Solutions
+                            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Full-Stack Development</span> Solutions
                         </h1>
                         <CardDescription className="text-lg pt-2 max-w-3xl mx-auto">
                             From concept to code, I build comprehensive, high-performance web applications that deliver tangible results and drive business growth.
@@ -148,7 +148,7 @@ export default function FullStackSolutionsPage() {
                      <CardContent className="p-8">
                         <div className="mb-16">
                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                What I <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Offer</span>
+                                What I <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Offer</span>
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {offerings.map((offering) => (
@@ -164,7 +164,7 @@ export default function FullStackSolutionsPage() {
 
                         <div>
                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Technology Stack</span>
+                                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Technology Stack</span>
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
@@ -211,7 +211,7 @@ export default function FullStackSolutionsPage() {
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                             <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                    Build a <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Standout Portfolio</span> with Me
+                                    Build a <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Standout Portfolio</span> with Me
                                 </h2>
                                 <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
                                     A great portfolio is more than a collection of projects—it's your digital handshake. I can help you build a professional, high-performance portfolio website from scratch that showcases your skills and personality.
@@ -243,7 +243,7 @@ export default function FullStackSolutionsPage() {
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                    Launch Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-commerce Store</span>
+                                    Launch Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">E-commerce Store</span>
                                 </h2>
                                 <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
                                     Ready to sell online? I build custom, high-performance e-commerce websites that provide a seamless shopping experience for your customers and are easy for you to manage.
@@ -275,7 +275,7 @@ export default function FullStackSolutionsPage() {
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                    Develop Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">LMS Platform</span>
+                                    Develop Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">LMS Platform</span>
                                 </h2>
                                 <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
                                     Empower educators and learners with a custom Learning Management System. I build scalable and intuitive LMS platforms for schools, companies, and individual creators.
@@ -301,13 +301,13 @@ export default function FullStackSolutionsPage() {
                                 </div>
                              </CardContent>
                         </Card>
-
+                        
                         <Separator className="my-16 bg-border/20" />
-
+                        
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                    Craft an <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Interactive E-learning Platform</span>
+                                    Craft an <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Interactive E-learning Platform</span>
                                 </h2>
                                 <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
                                     Go beyond traditional courses. I create immersive e-learning platforms that foster community, engagement, and dynamic learning experiences.
@@ -339,7 +339,7 @@ export default function FullStackSolutionsPage() {
                         <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                    Create a <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Modern Blog Platform</span>
+                                    Create a <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Modern Blog Platform</span>
                                 </h2>
                                 <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
                                     Share your voice and build an audience with a custom, high-performance blog. I develop feature-rich blogging platforms that are easy to manage and a pleasure to read.
@@ -367,7 +367,7 @@ export default function FullStackSolutionsPage() {
                         </Card>
 
                          <div className="text-center mt-16">
-                            <h3 className="text-2xl font-bold mb-4">Ready to build something <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">amazing?</span></h3>
+                            <h3 className="text-2xl font-bold mb-4">Ready to build something <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">amazing?</span></h3>
                             <p className="text-muted-foreground max-w-xl mx-auto mb-6">Let's discuss your project and how I can help bring your vision to life.</p>
                             <Button size="lg" asChild>
                                 <Link href="/#contact">
