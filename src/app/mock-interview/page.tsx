@@ -69,34 +69,36 @@ export default function MockInterviewPage() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             {tiers.map((tier) => (
-                                <Card key={tier.name} className="flex flex-col bg-card/20 border-border/10 hover:border-primary/20 transition-colors duration-300">
-                                    <CardHeader>
-                                        <CardTitle className="text-2xl">{tier.name}</CardTitle>
-                                        <div className="flex items-center gap-2 text-3xl font-bold text-primary">
-                                            <IndianRupee className="h-7 w-7" />
-                                            <span>{tier.price}</span>
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent className="flex-grow">
-                                        <p className="text-muted-foreground mb-6">{tier.description}</p>
-                                        <Separator className="my-4 bg-border/20" />
-                                        <ul className="space-y-3 text-muted-foreground text-sm">
-                                            {benefits.map((benefit, index) => (
-                                                <li key={index} className="flex items-start gap-3">
-                                                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                                                    <span>{benefit}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <Button asChild className="w-full">
-                                            <Link href={tier.mailto}>
-                                                <Mail className="mr-2 h-4 w-4" /> Book Session
-                                            </Link>
-                                        </Button>
-                                    </CardFooter>
-                                </Card>
+                                <div key={tier.name} className="h-full rounded-lg p-px bg-border/10 hover:bg-gradient-to-r from-accent to-primary transition-all duration-300">
+                                    <Card className="flex flex-col bg-card/20 border-0 h-full">
+                                        <CardHeader>
+                                            <CardTitle className="text-2xl">{tier.name}</CardTitle>
+                                            <div className="flex items-center gap-2 text-3xl font-bold text-primary">
+                                                <IndianRupee className="h-7 w-7" />
+                                                <span>{tier.price}</span>
+                                            </div>
+                                        </CardHeader>
+                                        <CardContent className="flex-grow">
+                                            <p className="text-muted-foreground mb-6">{tier.description}</p>
+                                            <Separator className="my-4 bg-border/20" />
+                                            <ul className="space-y-3 text-muted-foreground text-sm">
+                                                {benefits.map((benefit, index) => (
+                                                    <li key={index} className="flex items-start gap-3">
+                                                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                                                        <span>{benefit}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </CardContent>
+                                        <CardFooter>
+                                            <Button asChild className="w-full">
+                                                <Link href={tier.mailto}>
+                                                    <Mail className="mr-2 h-4 w-4" /> Book Session
+                                                </Link>
+                                            </Button>
+                                        </CardFooter>
+                                    </Card>
+                                </div>
                             ))}
                         </div>
 
