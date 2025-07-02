@@ -208,153 +208,163 @@ export default function FullStackSolutionsPage() {
                         
                         <Separator className="my-16 bg-border/20" />
 
-                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                Build a Standout <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Portfolio</span> with Me
-                            </h2>
-                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-                                A great portfolio is more than a collection of projects—it's your digital handshake. I can help you build a professional, high-performance portfolio website from scratch that showcases your skills and personality.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                {portfolioBenefits.map((benefit) => (
-                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
-                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
-                                            <benefit.icon className="h-6 w-6 text-primary" />
+                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                            <CardContent className="p-8">
+                                 <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                    Build a Standout <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Portfolio</span> with Me
+                                </h2>
+                                <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                    A great portfolio is more than a collection of projects—it's your digital handshake. I can help you build a professional, high-performance portfolio website from scratch that showcases your skills and personality.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    {portfolioBenefits.map((benefit) => (
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                                <benefit.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                            <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
                                         </div>
-                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
-                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                             <div className="text-center">
-                                <Button size="lg" asChild>
-                                    <Link href="/#contact">
-                                        <Rocket className="mr-2 h-5 w-5" />
-                                        Let's Build Your Portfolio
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
+                                    ))}
+                                </div>
+                                 <div className="text-center">
+                                    <Button size="lg" asChild>
+                                        <Link href="/#contact">
+                                            <Rocket className="mr-2 h-5 w-5" />
+                                            Let's Build Your Portfolio
+                                        </Link>
+                                    </Button>
+                                </div>
+                            </CardContent>
+                        </Card>
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                Launch Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-commerce Store</span>
-                            </h2>
-                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-                                Ready to sell online? I build custom, high-performance e-commerce websites that provide a seamless shopping experience for your customers and are easy for you to manage.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                {ecommerceBenefits.map((benefit) => (
-                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
-                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
-                                            <benefit.icon className="h-6 w-6 text-primary" />
+                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                             <CardContent className="p-8">
+                                 <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                    Launch Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-commerce Store</span>
+                                </h2>
+                                <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                    Ready to sell online? I build custom, high-performance e-commerce websites that provide a seamless shopping experience for your customers and are easy for you to manage.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    {ecommerceBenefits.map((benefit) => (
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                                <benefit.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                            <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
                                         </div>
-                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
-                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                             <div className="text-center">
-                                <Button size="lg" asChild>
-                                    <Link href="/#contact">
-                                        <ShoppingCart className="mr-2 h-5 w-5" />
-                                        Start Selling Online
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
+                                    ))}
+                                </div>
+                                 <div className="text-center">
+                                    <Button size="lg" asChild>
+                                        <Link href="/#contact">
+                                            <ShoppingCart className="mr-2 h-5 w-5" />
+                                            Start Selling Online
+                                        </Link>
+                                    </Button>
+                                </div>
+                             </CardContent>
+                        </Card>
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                Develop Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">LMS Platform</span>
-                            </h2>
-                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-                                Empower educators and learners with a custom Learning Management System. I build scalable and intuitive LMS platforms for schools, companies, and individual creators.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                {lmsBenefits.map((benefit) => (
-                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
-                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
-                                            <benefit.icon className="h-6 w-6 text-primary" />
+                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                             <CardContent className="p-8">
+                                 <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                    Develop Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">LMS Platform</span>
+                                </h2>
+                                <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                    Empower educators and learners with a custom Learning Management System. I build scalable and intuitive LMS platforms for schools, companies, and individual creators.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    {lmsBenefits.map((benefit) => (
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                                <benefit.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                            <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
                                         </div>
-                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
-                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                             <div className="text-center">
-                                <Button size="lg" asChild>
-                                    <Link href="/#contact">
-                                        <BookOpen className="mr-2 h-5 w-5" />
-                                        Build Your LMS
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
+                                    ))}
+                                </div>
+                                 <div className="text-center">
+                                    <Button size="lg" asChild>
+                                        <Link href="/#contact">
+                                            <BookOpen className="mr-2 h-5 w-5" />
+                                            Build Your LMS
+                                        </Link>
+                                    </Button>
+                                </div>
+                             </CardContent>
+                        </Card>
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                Craft an Interactive <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-learning Platform</span>
-                            </h2>
-                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-                                Go beyond traditional courses. I create immersive e-learning platforms that foster community, engagement, and dynamic learning experiences.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                {elearningBenefits.map((benefit) => (
-                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
-                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
-                                            <benefit.icon className="h-6 w-6 text-primary" />
+                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                             <CardContent className="p-8">
+                                 <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                    Craft an Interactive <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-learning Platform</span>
+                                </h2>
+                                <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                    Go beyond traditional courses. I create immersive e-learning platforms that foster community, engagement, and dynamic learning experiences.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    {elearningBenefits.map((benefit) => (
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                                <benefit.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                            <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
                                         </div>
-                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
-                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                             <div className="text-center">
-                                <Button size="lg" asChild>
-                                    <Link href="/#contact">
-                                        <Zap className="mr-2 h-5 w-5" />
-                                        Launch Your Platform
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
+                                    ))}
+                                </div>
+                                 <div className="text-center">
+                                    <Button size="lg" asChild>
+                                        <Link href="/#contact">
+                                            <Zap className="mr-2 h-5 w-5" />
+                                            Launch Your Platform
+                                        </Link>
+                                    </Button>
+                                </div>
+                             </CardContent>
+                        </Card>
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <div className="bg-card/20 border border-border/10 rounded-xl p-8 shadow-lg">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
-                                Create a Modern <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Blog Platform</span>
-                            </h2>
-                            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-                                Share your voice and build an audience with a custom, high-performance blog. I develop feature-rich blogging platforms that are easy to manage and a pleasure to read.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                {blogBenefits.map((benefit) => (
-                                     <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
-                                        <div className="p-3 bg-primary/10 rounded-full mb-4">
-                                            <benefit.icon className="h-6 w-6 text-primary" />
+                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                             <CardContent className="p-8">
+                                 <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                    Create a Modern <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Blog Platform</span>
+                                </h2>
+                                <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                    Share your voice and build an audience with a custom, high-performance blog. I develop feature-rich blogging platforms that are easy to manage and a pleasure to read.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    {blogBenefits.map((benefit) => (
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                                <benefit.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                            <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
                                         </div>
-                                        <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
-                                        <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                             <div className="text-center">
-                                <Button size="lg" asChild>
-                                    <Link href="/#contact">
-                                        <Feather className="mr-2 h-5 w-5" />
-                                        Start Your Blog
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
+                                    ))}
+                                </div>
+                                 <div className="text-center">
+                                    <Button size="lg" asChild>
+                                        <Link href="/#contact">
+                                            <Feather className="mr-2 h-5 w-5" />
+                                            Start Your Blog
+                                        </Link>
+                                    </Button>
+                                </div>
+                             </CardContent>
+                        </Card>
 
                          <div className="text-center mt-16">
                             <h3 className="text-2xl font-bold mb-4">Ready to build something amazing?</h3>
