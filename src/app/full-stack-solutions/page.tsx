@@ -238,12 +238,12 @@ export default function FullStackSolutionsPage() {
                                 </Card>
                                  <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                     <CardHeader>
-                                        <CardTitle className="flex items-center gap-2">
+                                        <CardTitle className="flex items-center justify-center gap-2">
                                             <Database className="h-6 w-6 text-accent" />
                                             Backend
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent>
+                                    <CardContent className="flex justify-center">
                                         <ul className="space-y-3">
                                             {technologies.backend.map((tech) => (
                                                 <li key={tech} className="flex items-center gap-3">
