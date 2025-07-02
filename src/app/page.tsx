@@ -170,8 +170,8 @@ function ServicesSection() {
           </div>
           <Link href="/career-coaching" className="group block transition-all duration-300 transform hover:-translate-y-2">
             <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
-              <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[0_0_40px_hsl(var(--primary)/0.8)]">
-                <Lightbulb className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_25px_hsl(var(--primary))]" />
+              <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
+                <Lightbulb className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
               </div>
               <h3 className="text-xl font-bold mb-2">Career Coach</h3>
               <p className="text-muted-foreground">
