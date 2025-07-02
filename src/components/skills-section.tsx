@@ -25,6 +25,9 @@ const skillsData = [
   { name: 'Python', level: 80, category: 'tools' },
   { name: 'Data Structures', level: 90, category: 'tools' },
   { name: 'Algorithms', level: 90, category: 'tools' },
+  { name: 'ChatGPT', level: 90, category: 'tools' },
+  { name: 'GitHub Co-pilot', level: 90, category: 'tools' },
+  { name: 'DeepSeek', level: 85, category: 'tools' },
 ];
 
 const categories = ['all', 'frontend', 'backend', 'tools'];
