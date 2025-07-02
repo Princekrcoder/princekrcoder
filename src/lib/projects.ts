@@ -9,6 +9,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: false,
   },
   {
     title: 'DevJobs - Job Portal Platform',
@@ -19,6 +20,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: false,
   },
   {
     title: 'InsightInk - Modern Blog Platform',
@@ -29,6 +31,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: false,
   },
   {
     title: 'ConnectSphere - Real-time Chat Application',
@@ -39,6 +42,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: false,
   },
   {
     title: 'VibeVerse - Social Media Platform',
@@ -49,6 +53,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: false,
   },
   {
     title: 'LearnSphere - Online Learning Management System',
@@ -59,6 +64,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: true,
   },
   {
     title: 'NexusAdmin - Comprehensive Admin Dashboard',
@@ -69,6 +75,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: true,
   },
     {
     title: 'TaskFlow - Collaborative Project Management Tool',
@@ -79,6 +86,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: true,
   },
   {
     title: 'ShopWise - Modern E-commerce Platform',
@@ -89,6 +97,7 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: true,
   },
   {
     title: 'RealtyConnect - Real Estate Marketplace',
@@ -99,5 +108,6 @@ export const projects = [
     ],
     live: 'https://github.com/Princekrcoder',
     category: 'web-development',
+    featured: true,
   },
 ];

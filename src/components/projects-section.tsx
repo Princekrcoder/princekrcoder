@@ -9,6 +9,8 @@ import { ArrowRight } from 'lucide-react';
 import { projects } from '@/lib/projects';
 
 export function ProjectsSection() {
+    const featuredProjects = projects.filter((project) => project.featured);
+
     return (
         <section id="projects" className="py-20 md:py-32">
              <div className="container mx-auto max-w-7xl px-4">
@@ -22,7 +24,7 @@ export function ProjectsSection() {
                 </div>
             </div>
             <div className="container mx-auto max-w-3xl px-4 flex flex-col items-center gap-10 pb-[50vh]">
-              {projects.map((project, i) => (
+              {featuredProjects.map((project, i) => (
                   <ProjectCard i={i} {...project} key={i} />
               ))}
             </div>
