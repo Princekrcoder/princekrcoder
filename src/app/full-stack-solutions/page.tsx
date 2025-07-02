@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Header } from '@/components/header';
@@ -120,6 +121,24 @@ const elearningBenefits = [
         icon: Gamepad2,
         title: 'Gamified Learning',
         description: 'Incorporate points, badges, and leaderboards to motivate students and make learning more interactive.',
+    },
+];
+
+const socialMediaBenefits = [
+    {
+        icon: MessagesSquare,
+        title: 'Real-Time Interaction',
+        description: 'Implement live chat, notifications, and feeds to keep your users engaged with real-time updates.',
+    },
+    {
+        icon: Users,
+        title: 'Community Building',
+        description: 'Create feature-rich user profiles, follower systems, and content sharing to build a thriving online community.',
+    },
+    {
+        icon: Zap,
+        title: 'Scalable & Secure',
+        description: 'Build your platform on a robust, scalable backend that ensures security and can grow with your user base.',
     },
 ];
 
@@ -433,6 +452,45 @@ export default function FullStackSolutionsPage() {
                         </Card>
                         </motion.div>
 
+                        <Separator className="my-16 bg-border/20" />
+
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            variants={sectionVariants}
+                        >
+                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                            <CardContent className="p-8">
+                                <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
+                                    Build Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Social &amp; Chat App</span>
+                                </h2>
+                                <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+                                    Connect communities and enable real-time communication with a custom-built social media or chat application designed to scale.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    {socialMediaBenefits.map((benefit) => (
+                                            <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                                                <benefit.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <h3 className="text-lg font-bold mb-2 text-primary">{benefit.title}</h3>
+                                            <p className="text-muted-foreground text-sm flex-grow">{benefit.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                    <div className="text-center">
+                                    <Button size="lg" asChild>
+                                        <Link href="/#contact">
+                                            <MessagesSquare className="mr-2 h-5 w-5" />
+                                            Start Your Community
+                                        </Link>
+                                    </Button>
+                                </div>
+                            </CardContent>
+                        </Card>
+                        </motion.div>
+
                          <motion.div 
                             initial="hidden"
                             whileInView="visible"
@@ -454,4 +512,3 @@ export default function FullStackSolutionsPage() {
             <Footer />
         </div>
     );
-}
