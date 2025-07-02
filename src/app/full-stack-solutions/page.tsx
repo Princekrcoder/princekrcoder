@@ -165,7 +165,7 @@ export default function FullStackSolutionsPage() {
                     </Button>
                 </div>
 
-                <Card className="bg-card/50 border-border/10 shadow-lg">
+                <Card className="bg-card/50 border-border/20 shadow-lg">
                     <CardHeader className="text-center p-8">
                         <motion.h1 
                             initial="hidden"
@@ -198,7 +198,7 @@ export default function FullStackSolutionsPage() {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {offerings.map((offering) => (
-                                    <div key={offering.title} className="p-6 bg-card/20 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+                                    <div key={offering.title} className="p-6 bg-card/20 rounded-xl border border-border/20 shadow-lg hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2">
                                         <h3 className="text-xl font-bold mb-2 text-primary">{offering.title}</h3>
                                         <p className="text-muted-foreground">{offering.description}</p>
                                     </div>
@@ -218,7 +218,7 @@ export default function FullStackSolutionsPage() {
                                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Technology Stack</span>
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
+                                <Card className="bg-card/20 border-border/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40">
                                     <CardHeader>
                                         <CardTitle className="flex items-center justify-center gap-2">
                                             <Code className="h-6 w-6 text-accent" />
@@ -236,7 +236,7 @@ export default function FullStackSolutionsPage() {
                                         </ul>
                                     </CardContent>
                                 </Card>
-                                 <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
+                                 <Card className="bg-card/20 border-border/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40">
                                     <CardHeader>
                                         <CardTitle className="flex items-center justify-center gap-2">
                                             <Database className="h-6 w-6 text-accent" />
@@ -265,7 +265,7 @@ export default function FullStackSolutionsPage() {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={sectionVariants}
                         >
-                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                        <Card className="bg-card/20 border-border/20 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20 hover:border-primary/40">
                             <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Build a <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Standout Portfolio</span> with Me
@@ -275,7 +275,7 @@ export default function FullStackSolutionsPage() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                     {portfolioBenefits.map((benefit) => (
-                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/20 hover:border-primary/40 transition-colors duration-300">
                                             <div className="p-3 bg-primary/10 rounded-full mb-4">
                                                 <benefit.icon className="h-6 w-6 text-primary" />
                                             </div>
@@ -304,7 +304,7 @@ export default function FullStackSolutionsPage() {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={sectionVariants}
                         >
-                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                        <Card className="bg-card/20 border-border/20 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20 hover:border-primary/40">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Launch Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">E-commerce Store</span>
@@ -314,7 +314,7 @@ export default function FullStackSolutionsPage() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                     {ecommerceBenefits.map((benefit) => (
-                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/20 hover:border-primary/40 transition-colors duration-300">
                                             <div className="p-3 bg-primary/10 rounded-full mb-4">
                                                 <benefit.icon className="h-6 w-6 text-primary" />
                                             </div>
@@ -343,7 +343,7 @@ export default function FullStackSolutionsPage() {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={sectionVariants}
                         >
-                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                        <Card className="bg-card/20 border-border/20 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20 hover:border-primary/40">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Develop Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">LMS Platform</span>
@@ -353,7 +353,7 @@ export default function FullStackSolutionsPage() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                     {lmsBenefits.map((benefit) => (
-                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/20 hover:border-primary/40 transition-colors duration-300">
                                             <div className="p-3 bg-primary/10 rounded-full mb-4">
                                                 <benefit.icon className="h-6 w-6 text-primary" />
                                             </div>
@@ -382,7 +382,7 @@ export default function FullStackSolutionsPage() {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={sectionVariants}
                         >
-                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                        <Card className="bg-card/20 border-border/20 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20 hover:border-primary/40">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Craft an <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Interactive E-learning Platform</span>
@@ -392,7 +392,7 @@ export default function FullStackSolutionsPage() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                     {elearningBenefits.map((benefit) => (
-                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/20 hover:border-primary/40 transition-colors duration-300">
                                             <div className="p-3 bg-primary/10 rounded-full mb-4">
                                                 <benefit.icon className="h-6 w-6 text-primary" />
                                             </div>
@@ -421,7 +421,7 @@ export default function FullStackSolutionsPage() {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={sectionVariants}
                         >
-                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                        <Card className="bg-card/20 border-border/20 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20 hover:border-primary/40">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Create a <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Modern Blog Platform</span>
@@ -431,7 +431,7 @@ export default function FullStackSolutionsPage() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                     {blogBenefits.map((benefit) => (
-                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                         <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/20 hover:border-primary/40 transition-colors duration-300">
                                             <div className="p-3 bg-primary/10 rounded-full mb-4">
                                                 <benefit.icon className="h-6 w-6 text-primary" />
                                             </div>
@@ -460,7 +460,7 @@ export default function FullStackSolutionsPage() {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={sectionVariants}
                         >
-                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
+                        <Card className="bg-card/20 border-border/20 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20 hover:border-primary/40">
                             <CardContent className="p-8">
                                 <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Build Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">Social &amp; Chat App</span>
@@ -470,7 +470,7 @@ export default function FullStackSolutionsPage() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                     {socialMediaBenefits.map((benefit) => (
-                                            <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/10">
+                                            <div key={benefit.title} className="flex flex-col items-center text-center p-6 bg-card/50 rounded-xl border border-border/20 hover:border-primary/40 transition-colors duration-300">
                                             <div className="p-3 bg-primary/10 rounded-full mb-4">
                                                 <benefit.icon className="h-6 w-6 text-primary" />
                                             </div>
