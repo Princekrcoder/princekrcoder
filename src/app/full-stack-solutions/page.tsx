@@ -5,7 +5,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, CheckCircle2, Code, Database, Rocket, Palette, Zap, User, Users, CreditCard, Package, TrendingUp, ShoppingCart, BookOpen, Award, FileText, Search, MessageSquare, Feather, Video, Gamepad2, MessagesSquare } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Code, Database, Rocket, Palette, Zap, User, Users, CreditCard, Package, TrendingUp, ShoppingCart, BookOpen, Award, FileText, Search, MessageSquare, Feather, Video, Gamepad2, MessagesSquare, Eye } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
@@ -284,11 +284,17 @@ export default function FullStackSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                                 <div className="text-center">
+                                <div className="text-center flex items-center justify-center gap-4">
                                     <Button size="lg" asChild>
                                         <Link href="/#contact">
                                             <Rocket className="mr-2 h-5 w-5" />
                                             Let's Build Your Portfolio
+                                        </Link>
+                                    </Button>
+                                    <Button size="lg" variant="outline" asChild>
+                                        <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
+                                            <Eye className="mr-2 h-5 w-5" />
+                                            View Demo
                                         </Link>
                                     </Button>
                                 </div>
@@ -323,11 +329,17 @@ export default function FullStackSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                                 <div className="text-center">
+                                <div className="text-center flex items-center justify-center gap-4">
                                     <Button size="lg" asChild>
                                         <Link href="/#contact">
                                             <ShoppingCart className="mr-2 h-5 w-5" />
                                             Start Selling Online
+                                        </Link>
+                                    </Button>
+                                    <Button size="lg" variant="outline" asChild>
+                                        <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
+                                            <Eye className="mr-2 h-5 w-5" />
+                                            View Demo
                                         </Link>
                                     </Button>
                                 </div>
@@ -362,11 +374,17 @@ export default function FullStackSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                                 <div className="text-center">
+                                <div className="text-center flex items-center justify-center gap-4">
                                     <Button size="lg" asChild>
                                         <Link href="/#contact">
                                             <BookOpen className="mr-2 h-5 w-5" />
                                             Build Your LMS
+                                        </Link>
+                                    </Button>
+                                     <Button size="lg" variant="outline" asChild>
+                                        <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
+                                            <Eye className="mr-2 h-5 w-5" />
+                                            View Demo
                                         </Link>
                                     </Button>
                                 </div>
@@ -401,11 +419,17 @@ export default function FullStackSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                                 <div className="text-center">
+                                 <div className="text-center flex items-center justify-center gap-4">
                                     <Button size="lg" asChild>
                                         <Link href="/#contact">
                                             <Zap className="mr-2 h-5 w-5" />
                                             Launch Your Platform
+                                        </Link>
+                                    </Button>
+                                    <Button size="lg" variant="outline" asChild>
+                                        <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
+                                            <Eye className="mr-2 h-5 w-5" />
+                                            View Demo
                                         </Link>
                                     </Button>
                                 </div>
@@ -440,11 +464,17 @@ export default function FullStackSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                                 <div className="text-center">
+                                <div className="text-center flex items-center justify-center gap-4">
                                     <Button size="lg" asChild>
                                         <Link href="/#contact">
                                             <Feather className="mr-2 h-5 w-5" />
                                             Start Your Blog
+                                        </Link>
+                                    </Button>
+                                     <Button size="lg" variant="outline" asChild>
+                                        <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
+                                            <Eye className="mr-2 h-5 w-5" />
+                                            View Demo
                                         </Link>
                                     </Button>
                                 </div>
@@ -479,11 +509,17 @@ export default function FullStackSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                                    <div className="text-center">
+                                    <div className="text-center flex items-center justify-center gap-4">
                                     <Button size="lg" asChild>
                                         <Link href="/#contact">
                                             <MessagesSquare className="mr-2 h-5 w-5" />
                                             Start Your Community
+                                        </Link>
+                                    </Button>
+                                    <Button size="lg" variant="outline" asChild>
+                                        <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
+                                            <Eye className="mr-2 h-5 w-5" />
+                                            View Demo
                                         </Link>
                                     </Button>
                                 </div>
