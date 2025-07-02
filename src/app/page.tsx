@@ -141,7 +141,7 @@ function ServicesSection() {
           <p className="mt-2 text-lg text-muted-foreground">What I can do for you.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <LayoutTemplate className="h-8 w-8 text-primary" />
             </div>
@@ -150,7 +150,7 @@ function ServicesSection() {
               Crafting beautiful and responsive user interfaces with modern technologies like React, Next.js, and Tailwind CSS.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <ServerCog className="h-8 w-8 text-primary" />
             </div>
@@ -159,7 +159,7 @@ function ServicesSection() {
               Building robust, scalable server-side logic and APIs using Node.js, Express, and databases like MongoDB and Firebase.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Rocket className="h-8 w-8 text-primary" />
             </div>
@@ -168,16 +168,18 @@ function ServicesSection() {
               Providing end-to-end development services, from concept and design to deployment and maintenance.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
-            <div className="p-4 bg-primary/10 rounded-full mb-4">
-              <Lightbulb className="h-8 w-8 text-primary" />
+          <Link href="/career-coaching" className="block transition-all duration-300 transform hover:-translate-y-2">
+            <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
+              <div className="p-4 bg-primary/10 rounded-full mb-4">
+                <Lightbulb className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Career Coach</h3>
+              <p className="text-muted-foreground">
+                Providing guidance and mentorship to aspiring developers, helping them navigate their career path and land their dream job.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-2">Career Coach</h3>
-            <p className="text-muted-foreground">
-              Providing guidance and mentorship to aspiring developers, helping them navigate their career path and land their dream job.
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          </Link>
+          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Briefcase className="h-8 w-8 text-primary" />
             </div>
@@ -186,7 +188,7 @@ function ServicesSection() {
               Personal branding websites to showcase your skills, resume, and projects. I build SEO-optimized developer portfolios and freelancer resume websites.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Handshake className="h-8 w-8 text-primary" />
             </div>
