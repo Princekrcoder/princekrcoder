@@ -46,7 +46,7 @@ export function StaticProjectCard({ title, achievements, live }: StaticProjectCa
             ref={cardRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="flex flex-col h-full bg-card/50 border-border/10 shadow-lg hover:shadow-primary/20 transition-transform duration-200 transform-style-3d will-change-transform"
+            className="flex flex-col h-full bg-card/50 border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform-style-3d will-change-transform"
         >
             <CardHeader>
                 <CardTitle>{title}</CardTitle>
