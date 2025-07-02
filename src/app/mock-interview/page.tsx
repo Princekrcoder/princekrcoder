@@ -56,7 +56,7 @@ export default function MockInterviewPage() {
                             1:1 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Mock Interview</span> Session
                         </h1>
                         <CardDescription className="text-lg pt-2 max-w-3xl mx-auto">
-                            Prepare to ace your technical interviews with a realistic, personalized mock interview session. Each session lasts between 45-60 minutes.
+                            Prepare to ace your technical interviews with a realistic, personalized mock interview session. Each session lasts between 30-60 minutes.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="p-8">
