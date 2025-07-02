@@ -3,7 +3,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, Clock, DollarSign, Video, ArrowLeft, Mail } from 'lucide-react';
+import { CheckCircle2, Clock, IndianRupee, Video, ArrowLeft, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function MockInterviewPage() {
@@ -61,10 +61,10 @@ export default function MockInterviewPage() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 text-lg">
-                                <DollarSign className="h-6 w-6 text-primary" />
+                                <IndianRupee className="h-6 w-6 text-primary" />
                                 <div>
                                     <p className="font-semibold">Price</p>
-                                    <p className="text-muted-foreground">$40 USD</p>
+                                    <p className="text-muted-foreground">₹599</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 text-lg">
