@@ -69,7 +69,7 @@ export default function MockInterviewPage() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             {tiers.map((tier) => (
-                                <div key={tier.name} className="h-full rounded-lg p-px bg-border/10 hover:bg-gradient-to-r from-accent to-primary transition-all duration-300">
+                                <div key={tier.name} className="h-full rounded-lg p-px bg-border/10 hover:bg-gradient-to-r from-accent/60 to-primary/60 transition-all duration-300">
                                     <Card className="flex flex-col bg-card/20 border-0 h-full">
                                         <CardHeader>
                                             <CardTitle className="text-2xl">{tier.name}</CardTitle>
