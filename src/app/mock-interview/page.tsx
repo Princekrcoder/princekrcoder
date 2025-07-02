@@ -3,7 +3,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, Clock, IndianRupee, Video, ArrowLeft, Mail } from 'lucide-react';
+import { CheckCircle2, IndianRupee, Mail, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 
@@ -26,13 +26,21 @@ const tiers = [
         description: 'For experienced candidates preparing for senior roles at top MNCs. This session dives deep into advanced algorithms and complex system design scenarios.',
         mailto: 'mailto:princekr2840@gmail.com?subject=Advanced%20Mock%20Interview%20Booking'
     }
-]
+];
+
+const benefits = [
+    'Realistic technical interview simulation (DSA & System Design relevant to your level).',
+    'In-depth feedback on problem-solving, coding style, and communication.',
+    'Strategies to handle behavioral questions effectively.',
+    'A recording of the session for your review.'
+];
+
 
 export default function MockInterviewPage() {
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-grow container mx-auto max-w-5xl px-4 py-16">
+            <main className="flex-grow container mx-auto max-w-7xl px-4 py-16">
                 <div className="mb-12">
                     <Button asChild variant="ghost" className="-ml-4">
                         <Link href="/#services">
@@ -52,35 +60,11 @@ export default function MockInterviewPage() {
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="p-8">
-                        <div className="flex flex-col gap-6 max-w-2xl mx-auto mb-12">
-                            <h3 className="text-2xl font-bold text-center">What you'll get in every session:</h3>
-                            <ul className="space-y-3 text-muted-foreground">
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                                    <span>Realistic technical interview simulation (DSA & System Design relevant to your level).</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                                    <span>In-depth feedback on problem-solving, coding style, and communication.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                                    <span>Strategies to handle behavioral questions effectively.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                                    <span>A recording of the session for your review.</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <Separator className="my-8 bg-border/20" />
-
                         <div className="text-center mb-12">
                              <h2 className="font-headline text-3xl font-bold tracking-tight">
                                 Choose Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Level</span>
                             </h2>
-                            <p className="mt-2 text-muted-foreground">Select the tier that best matches your experience.</p>
+                            <p className="mt-2 text-muted-foreground">Select the tier that best matches your experience. All tiers include the benefits listed below.</p>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -94,7 +78,16 @@ export default function MockInterviewPage() {
                                         </div>
                                     </CardHeader>
                                     <CardContent className="flex-grow">
-                                        <p className="text-muted-foreground">{tier.description}</p>
+                                        <p className="text-muted-foreground mb-6">{tier.description}</p>
+                                        <Separator className="my-4 bg-border/20" />
+                                        <ul className="space-y-3 text-muted-foreground text-sm">
+                                            {benefits.map((benefit, index) => (
+                                                <li key={index} className="flex items-start gap-3">
+                                                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                                                    <span>{benefit}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </CardContent>
                                     <CardFooter>
                                         <Button asChild className="w-full">
