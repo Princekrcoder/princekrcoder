@@ -152,7 +152,7 @@ export default function FullStackSolutionsPage() {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {offerings.map((offering) => (
-                                    <div key={offering.title} className="p-6 bg-card/20 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
+                                    <div key={offering.title} className="p-6 bg-card/20 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
                                         <h3 className="text-xl font-bold mb-2 text-primary">{offering.title}</h3>
                                         <p className="text-muted-foreground">{offering.description}</p>
                                     </div>
@@ -167,7 +167,7 @@ export default function FullStackSolutionsPage() {
                                 Technology <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Stack</span>
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <Card className="bg-card/20 border-border/10">
+                                <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2">
                                             <Code className="h-6 w-6 text-accent" />
@@ -185,7 +185,7 @@ export default function FullStackSolutionsPage() {
                                         </ul>
                                     </CardContent>
                                 </Card>
-                                 <Card className="bg-card/20 border-border/10">
+                                 <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2">
                                             <Database className="h-6 w-6 text-accent" />
@@ -208,7 +208,7 @@ export default function FullStackSolutionsPage() {
                         
                         <Separator className="my-16 bg-border/20" />
 
-                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                             <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Build a Standout <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Portfolio</span> with Me
@@ -240,7 +240,7 @@ export default function FullStackSolutionsPage() {
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Launch Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-commerce Store</span>
@@ -272,7 +272,7 @@ export default function FullStackSolutionsPage() {
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Develop Your <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">LMS Platform</span>
@@ -304,7 +304,7 @@ export default function FullStackSolutionsPage() {
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Craft an Interactive <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">E-learning Platform</span>
@@ -336,7 +336,7 @@ export default function FullStackSolutionsPage() {
 
                         <Separator className="my-16 bg-border/20" />
 
-                        <Card className="bg-card/20 border-border/10 shadow-lg">
+                        <Card className="bg-card/20 border-border/10 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-primary/20">
                              <CardContent className="p-8">
                                  <h2 className="font-headline text-3xl font-bold tracking-tight text-center mb-8">
                                     Create a Modern <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Blog Platform</span>
