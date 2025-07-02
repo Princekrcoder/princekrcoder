@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CodeXml, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Handshake, Github, Linkedin, Mail } from 'lucide-react';
+import { CodeXml, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Handshake, Github, Linkedin, Mail, ClipboardCheck } from 'lucide-react';
 import { SkillsSection } from '@/components/skills-section';
 import { DeveloperAnimation } from '@/components/developer-animation';
 import { ProjectsSection } from '@/components/projects-section';
@@ -179,15 +179,17 @@ function ServicesSection() {
               </p>
             </div>
           </Link>
-          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
-            <div className="p-4 bg-primary/10 rounded-full mb-4">
-              <Briefcase className="h-8 w-8 text-primary" />
+          <Link href="/mock-interview" className="group block transition-all duration-300 transform hover:-translate-y-2">
+            <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
+              <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
+                <ClipboardCheck className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Mock Interview Session</h3>
+              <p className="text-muted-foreground">
+                Practice and excel in your technical interviews with a realistic simulation and constructive feedback.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-2">Portfolio or Resume Website</h3>
-            <p className="text-muted-foreground">
-              Personal branding websites to showcase your skills, resume, and projects. I build SEO-optimized developer portfolios and freelancer resume websites.
-            </p>
-          </div>
+          </Link>
           <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Handshake className="h-8 w-8 text-primary" />
