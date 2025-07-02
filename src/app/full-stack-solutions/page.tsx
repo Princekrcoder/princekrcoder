@@ -220,12 +220,12 @@ export default function FullStackSolutionsPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <Card className="bg-card/20 border-border/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                     <CardHeader>
-                                        <CardTitle className="flex items-center gap-2">
+                                        <CardTitle className="flex items-center justify-center gap-2">
                                             <Code className="h-6 w-6 text-accent" />
                                             Frontend
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent>
+                                    <CardContent className="flex justify-center">
                                         <ul className="space-y-3">
                                             {technologies.frontend.map((tech) => (
                                                 <li key={tech} className="flex items-center gap-3">
@@ -512,3 +512,4 @@ export default function FullStackSolutionsPage() {
             <Footer />
         </div>
     );
+}
