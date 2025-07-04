@@ -1,4 +1,6 @@
 
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { CodeXml, BrainCircuit, Briefcase, LayoutTemplate, ServerCog, Rocket, Lightbulb, Handshake, Github, Linkedin, Mail, ClipboardCheck } from 'lucide-react';
@@ -9,6 +11,32 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { DiscordIcon } from '@/components/icons/discord-icon';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { motion } from 'framer-motion';
+
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+            staggerChildren: 0.2
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        }
+    }
+};
 
 export default function Home() {
   return (
@@ -18,8 +46,12 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <SkillsSection />
-        <ProjectsSection />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={sectionVariants}>
+          <SkillsSection />
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={sectionVariants}>
+          <ProjectsSection />
+        </motion.div>
       </main>
       <Footer />
       <TooltipProvider>
@@ -40,9 +72,16 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="container mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-20 text-center md:py-32">
-      <DeveloperAnimation />
-      <div className="flex flex-col gap-2">
+    <motion.section 
+      className="container mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-20 text-center md:py-32"
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+    >
+      <motion.div variants={itemVariants}>
+        <DeveloperAnimation />
+      </motion.div>
+      <motion.div className="flex flex-col gap-2" variants={itemVariants}>
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
           <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient">
             Hi, I'm Prince Kumar
@@ -51,8 +90,8 @@ function HeroSection() {
         <p className="max-w-2xl text-lg text-muted-foreground">
           I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.
         </p>
-      </div>
-      <div className="flex gap-4">
+      </motion.div>
+      <motion.div className="flex gap-4" variants={itemVariants}>
         <Button asChild>
           <Link href="https://github.com/Princekrcoder" target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" /> GitHub
@@ -63,22 +102,29 @@ function HeroSection() {
             <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
           </Link>
         </Button>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
 
 function AboutSection() {
     return (
-        <section id="about" className="py-20 md:py-32">
+        <motion.section 
+            id="about" 
+            className="py-20 md:py-32"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+        >
             <div className="container mx-auto max-w-7xl px-4">
-                <div className="text-center mb-16">
+                <motion.div className="text-center mb-16" variants={itemVariants}>
                     <h2 className="font-headline text-4xl font-bold tracking-tight">
                         About <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Me</span>
                     </h2>
-                </div>
+                </motion.div>
                 <div className="grid md:grid-cols-2 gap-16 items-start">
-                    <div className="flex flex-col gap-6">
+                    <motion.div className="flex flex-col gap-6" variants={itemVariants}>
                         <h3 className="font-headline text-2xl font-bold">Passionate Web Developer & Tech Creator</h3>
                         <p className="text-muted-foreground text-lg leading-relaxed">
                             With 2 years of freelancing experience in web development, I specialize in building responsive and high-performance web applications using modern technologies.
@@ -94,8 +140,8 @@ function AboutSection() {
                                 <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</Link>
                             </Button>
                         </div>
-                    </div>
-                    <div className="flex flex-col gap-8">
+                    </motion.div>
+                    <motion.div className="flex flex-col gap-8" variants={itemVariants}>
                         <div className="flex items-start gap-4 p-6 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300">
                             <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
                                 <CodeXml className="h-6 w-6 text-primary" />
@@ -123,25 +169,32 @@ function AboutSection() {
                                 <p className="text-muted-foreground mt-1">Successfully delivered 20+ client projects, managing everything from development to deployment.</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 
 function ServicesSection() {
   return (
-    <section id="services" className="py-20 md:py-32 bg-card/20">
+    <motion.section 
+        id="services" 
+        className="py-20 md:py-32 bg-card/20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionVariants}
+    >
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="text-center mb-16">
+        <motion.div className="text-center mb-16" variants={itemVariants}>
           <h2 className="font-headline text-4xl font-bold tracking-tight">
             My <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Services</span>
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">What I can do for you.</p>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          <motion.div variants={itemVariants} className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <LayoutTemplate className="h-8 w-8 text-primary" />
             </div>
@@ -149,8 +202,8 @@ function ServicesSection() {
             <p className="text-muted-foreground">
               Crafting beautiful and responsive user interfaces with modern technologies like React, Next.js, and Tailwind CSS.
             </p>
-          </div>
-          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          </motion.div>
+          <motion.div variants={itemVariants} className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <ServerCog className="h-8 w-8 text-primary" />
             </div>
@@ -158,41 +211,47 @@ function ServicesSection() {
             <p className="text-muted-foreground">
               Building robust, scalable server-side logic and APIs using Node.js, Express, and databases like MongoDB and Firebase.
             </p>
-          </div>
-          <Link href="/full-stack-solutions" className="group block transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
-              <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
-                <Rocket className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Full-Stack Solutions</h3>
-              <p className="text-muted-foreground">
-                Providing end-to-end development services, from concept and design to deployment and maintenance.
-              </p>
-            </div>
-          </Link>
-          <Link href="/career-coaching" className="group block transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
-              <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
-                <Lightbulb className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Career Coach</h3>
-              <p className="text-muted-foreground">
-                Providing guidance and mentorship to aspiring developers, helping them navigate their career path and land their dream job.
-              </p>
-            </div>
-          </Link>
-          <Link href="/mock-interview" className="group block transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
-              <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
-                <ClipboardCheck className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Mock Interview Session</h3>
-              <p className="text-muted-foreground">
-                Practice and excel in your technical interviews with a realistic simulation and constructive feedback.
-              </p>
-            </div>
-          </Link>
-          <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+          </motion.div>
+          <motion.div variants={itemVariants} className="h-full">
+            <Link href="/full-stack-solutions" className="group block transition-all duration-300 transform hover:-translate-y-2 h-full">
+                <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
+                    <Rocket className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Full-Stack Solutions</h3>
+                  <p className="text-muted-foreground">
+                    Providing end-to-end development services, from concept and design to deployment and maintenance.
+                  </p>
+                </div>
+            </Link>
+          </motion.div>
+          <motion.div variants={itemVariants} className="h-full">
+            <Link href="/career-coaching" className="group block transition-all duration-300 transform hover:-translate-y-2 h-full">
+                <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
+                    <Lightbulb className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Career Coach</h3>
+                  <p className="text-muted-foreground">
+                    Providing guidance and mentorship to aspiring developers, helping them navigate their career path and land their dream job.
+                  </p>
+                </div>
+            </Link>
+          </motion.div>
+          <motion.div variants={itemVariants} className="h-full">
+            <Link href="/mock-interview" className="group block transition-all duration-300 transform hover:-translate-y-2 h-full">
+                <div className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-colors">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4 transition-all duration-300 group-hover:shadow-[inset_0_0_20px_5px_hsl(var(--primary)/0.5)]">
+                    <ClipboardCheck className="h-8 w-8 text-primary transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary))]" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Mock Interview Session</h3>
+                  <p className="text-muted-foreground">
+                    Practice and excel in your technical interviews with a realistic simulation and constructive feedback.
+                  </p>
+                </div>
+            </Link>
+          </motion.div>
+          <motion.div variants={itemVariants} className="flex h-full flex-col items-center text-center p-8 bg-card/50 rounded-xl border border-border/10 shadow-lg hover:shadow-primary/20 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-primary/10 rounded-full mb-4">
               <Handshake className="h-8 w-8 text-primary" />
             </div>
@@ -200,9 +259,9 @@ function ServicesSection() {
             <p className="text-muted-foreground">
               I help projects grow by contributing clean code, fixing bugs, and documenting.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
