@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface ProjectCardProps {
     i: number;
@@ -14,15 +14,23 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ i, title, achievements, live }: ProjectCardProps) {
+    const ref = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['start end', 'end start'],
+    });
+
+    const scale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.8, 1, 1, 0.8]);
+    const opacity = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0.3, 1, 1, 0.3]);
+
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            ref={ref}
             style={{
                 top: `calc(5rem + ${i * 2}rem)`, // Each card sticks 2rem lower than the last
                 zIndex: i + 1, // Ensure cards stack correctly
+                scale,
+                opacity,
             }}
             className="group sticky w-full max-w-3xl"
         >
