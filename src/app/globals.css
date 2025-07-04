@@ -50,12 +50,19 @@
 }
  
 @layer base {
+  html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
-    scroll-behavior: smooth;
   }
 }
 
